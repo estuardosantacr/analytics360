@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/analytics360/Analytics360-imagotipo-azul-y-amarillo-fondo-tranparente.png">
+    <title>Automatizaciones | Analytics360</title>
+    <meta name="description" content="Libere tiempo valioso automatizando tareas repetitivas con nuestras soluciones de automatización inteligente.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+<body class="font-sans text-primary bg-gray-50 overflow-x-hidden pt-20">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 top-0 start-0 bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between p-4 px-6 md:px-8 lg:px-12">
+            <a href="/" class="flex items-center -space-x-1"><img src="/analytics360/Analytics360-imagotipo-azul-y-amarillo-fondo-tranparente.png" alt="Analytics360 Logo" class="h-28 w-auto"><span class="self-center text-2xl font-bold whitespace-nowrap text-primary">Analytics<span class="text-secondary">360</span></span></a>
+            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <a href="/contacto.html" class="text-white bg-secondary hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-transform hover:scale-105 shadow-md">Contactar</a>
+                <button id="menu-btn" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false">
+                    <span class="sr-only">Abrir menú</span>
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="mobile-menu">
+                <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-transparent">
+                    <li><a href="/" class="block py-2 px-3 text-gray-700 hover:text-secondary md:p-0 transition-colors">Inicio</a></li>
+                    <li><a href="/servicios.html" class="block py-2 px-3 text-gray-700 hover:text-secondary md:p-0 transition-colors">Servicios</a></li>
+                    <li><a href="/portafolio.html" class="block py-2 px-3 text-gray-700 hover:text-secondary md:p-0 transition-colors">Portafolio</a></li>
+                    <li><a href="/automatizaciones.html" class="block py-2 px-3 text-secondary md:p-0 font-semibold" aria-current="page">Automatizaciones</a></li>
+                    <li><a href="/nosotros.html" class="block py-2 px-3 text-gray-700 hover:text-secondary md:p-0 transition-colors">Nosotros</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Hero -->
+    <header class="bg-gradient-to-br from-[#1d2937] to-[#2c3e50] pt-24 pb-24 px-6 text-center relative overflow-hidden">
+        <div class="max-w-4xl mx-auto relative z-10 reveal">
+            <span class="inline-flex items-center gap-2 mb-4 bg-orange-500/20 text-orange-400 px-4 py-1 rounded-full text-sm font-semibold border border-orange-500/30">
+                <i data-lucide="zap" class="w-4 h-4"></i> Automatización Inteligente
+            </span>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Automatizaciones <span class="text-secondary">Sin Límites</span></h1>
+            <p class="text-xl md:text-2xl text-gray-300 font-light max-w-2xl mx-auto">
+                Libere tiempo valioso automatizando tareas repetitivas y permita que sus sistemas hablen entre sí, sin código y sin intervención manual.
+            </p>
+        </div>
+        
+        <!-- Abstract flow graphic -->
+        <div class="absolute inset-x-0 bottom-0 pointer-events-none opacity-20 hidden md:block">
+            <svg class="w-full text-white" viewBox="0 0 1440 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="200" cy="150" r="10" fill="currentColor"/>
+                <circle cx="720" cy="80" r="20" fill="currentColor"/>
+                <circle cx="1240" cy="150" r="10" fill="currentColor"/>
+                <path d="M210 150 C400 150, 500 80, 700 80" stroke="currentColor" stroke-width="2" stroke-dasharray="10 10"/>
+                <path d="M740 80 C900 80, 1000 150, 1230 150" stroke="currentColor" stroke-width="2" stroke-dasharray="10 10"/>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Explicación Automatizaciones -->
+    <section class="max-w-5xl mx-auto px-6 py-20 bg-white rounded-3xl shadow-xl -mt-10 relative z-10 mx-6 md:mx-auto reveal border border-gray-100">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="w-full md:w-1/2">
+                <div class="inline-flex items-center justify-center p-4 bg-orange-50 rounded-2xl mb-6">
+                    <i data-lucide="workflow" class="w-12 h-12 text-secondary"></i>
+                </div>
+                <h2 class="text-3xl font-bold mb-4">¿Qué Automatizamos?</h2>
+                <p class="text-gray-600 text-lg leading-relaxed mb-6 font-medium">
+                    Creamos <span class="text-secondary font-bold">flujos de trabajo inteligentes</span> que conectan sus aplicaciones y sistemas, eliminando tareas manuales y permitiendo que todo funcione en piloto automático.
+                </p>
+                <p class="text-gray-500 leading-relaxed">
+                    Conectamos sus hojas de cálculo, CRM, correos electrónicos y bases de datos en flujos eficientes, eliminando el error humano y la transferencia manual de datos.
+                </p>
+            </div>
+            <div class="w-full md:w-1/2 relative bg-gray-50 rounded-2xl border border-gray-200 p-8 flex flex-col justify-center items-center shadow-inner gap-6">
+                <!-- Visual: múltiples herramientas -->
+                <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">Herramientas que utilizamos</p>
+                <div class="flex items-center gap-6 flex-wrap justify-center">
+                    <div class="flex flex-col items-center gap-2 group">
+                        <div class="w-16 h-16 bg-white rounded-2xl shadow-md border-2 border-gray-200 flex items-center justify-center transition-all hover:scale-110 hover:border-secondary">
+                            <img src="https://n8n.io/favicon.ico" alt="n8n" class="w-8 h-8" onerror="this.parentElement.innerHTML='<span class=\'font-bold text-lg text-primary\'>n8n</span>'">
+                        </div>
+                        <span class="text-xs font-semibold text-gray-500">n8n</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 group">
+                        <div class="w-16 h-16 bg-white rounded-2xl shadow-md border-2 border-gray-200 flex items-center justify-center transition-all hover:scale-110 hover:border-secondary">
+                            <img src="https://images.ctfassets.net/lzny33ho1g45/6YoKV4MBLYNcP808MlRnMi/1f818cdbba498112d498bff52a415037/zapier-logo.png" alt="Zapier" class="w-8 h-8 object-contain" onerror="this.parentElement.innerHTML='<span class=\'font-bold text-lg text-orange-500\'>Z</span>'">
+                        </div>
+                        <span class="text-xs font-semibold text-gray-500">Zapier</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 group">
+                        <div class="w-16 h-16 bg-white rounded-2xl shadow-md border-2 border-gray-200 flex items-center justify-center transition-all hover:scale-110 hover:border-secondary">
+                            <img src="https://images.ctfassets.net/qqlj6g4ee76j/2gfJBMPPhJWcaNMVQdh1B2/264a0e57ac2ee75076bfb87b10c1e92e/make-logo-squeezed.png" alt="Make" class="w-8 h-8 object-contain" onerror="this.parentElement.innerHTML='<span class=\'font-bold text-lg text-purple-600\'>M</span>'">
+                        </div>
+                        <span class="text-xs font-semibold text-gray-500">Make</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 group">
+                        <div class="w-16 h-16 bg-white rounded-2xl shadow-md border-2 border-gray-200 flex items-center justify-center transition-all hover:scale-110 hover:border-secondary">
+                            <i data-lucide="bot" class="w-8 h-8 text-blue-500"></i>
+                        </div>
+                        <span class="text-xs font-semibold text-gray-500">Power Automate</span>
+                    </div>
+                </div>
+                <!-- Animated flow line -->
+                <div class="w-full flex items-center gap-2 mt-2">
+                    <div class="w-10 h-10 bg-white rounded-xl shadow-sm border border-green-400 flex items-center justify-center">
+                        <i data-lucide="file-spreadsheet" class="w-5 h-5 text-green-600"></i>
+                    </div>
+                    <div class="h-1 bg-gray-300 flex-1 relative overflow-hidden rounded-full">
+                        <div class="absolute inset-y-0 left-0 bg-secondary w-full animate-[slide_2s_infinite]"></div>
+                    </div>
+                    <div class="w-10 h-10 bg-primary rounded-xl shadow-sm flex items-center justify-center">
+                        <i data-lucide="zap" class="w-5 h-5 text-secondary"></i>
+                    </div>
+                    <div class="h-1 bg-gray-300 flex-1 relative overflow-hidden rounded-full">
+                        <div class="absolute inset-y-0 left-0 bg-brandTurquoise w-full animate-[slide_2s_infinite]" style="animation-delay: 1s"></div>
+                    </div>
+                    <div class="w-10 h-10 bg-white rounded-xl shadow-sm border border-brandTurquoise flex items-center justify-center">
+                        <i data-lucide="database" class="w-5 h-5 text-brandTurquoise"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid Documentado -->
+    <section class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 reveal">Soluciones de Automatización</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 1: Alertas de KPIs -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 hover:-translate-y-1 reveal group relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-red-400 to-red-600"></div>
+                    <div class="w-14 h-14 bg-red-50 text-red-500 rounded-2xl flex items-center justify-center mb-6 ml-2 group-hover:bg-red-500 group-hover:text-white transition-colors duration-300 shadow-sm">
+                        <i data-lucide="siren" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 pl-2">Alertas de KPIs</h4>
+                    <ul class="text-gray-600 space-y-3 mt-4 text-sm pl-2">
+                        <li class="flex items-start gap-2"><i data-lucide="activity" class="text-red-400 w-4 h-4 shrink-0 mt-0.5"></i> Monitoreo de indicadores clave</li>
+                        <li class="flex items-start gap-2"><i data-lucide="bell-ring" class="text-red-400 w-4 h-4 shrink-0 mt-0.5"></i> Alertas por email, Slack o Teams</li>
+                        <li class="flex items-start gap-2"><i data-lucide="scan-eye" class="text-red-400 w-4 h-4 shrink-0 mt-0.5"></i> Detección temprana de problemas</li>
+                    </ul>
+                </div>
+
+                <!-- 2: Sincronización -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 hover:-translate-y-1 reveal group relative overflow-hidden" style="transition-delay: 50ms;">
+                    <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-blue-400 to-blue-600"></div>
+                    <div class="w-14 h-14 bg-blue-50 text-blue-500 rounded-2xl flex items-center justify-center mb-6 ml-2 group-hover:bg-blue-500 group-hover:text-white transition-colors duration-300 shadow-sm">
+                        <i data-lucide="repeat-2" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 pl-2">Sincronización</h4>
+                    <ul class="text-gray-600 space-y-3 mt-4 text-sm pl-2">
+                        <li class="flex items-start gap-2"><i data-lucide="cloud-upload" class="text-blue-400 w-4 h-4 shrink-0 mt-0.5"></i> Carga desde múltiples fuentes</li>
+                        <li class="flex items-start gap-2"><i data-lucide="arrow-right-left" class="text-blue-400 w-4 h-4 shrink-0 mt-0.5"></i> Sheets/CRM → Data Warehouse</li>
+                        <li class="flex items-start gap-2"><i data-lucide="refresh-cw" class="text-blue-400 w-4 h-4 shrink-0 mt-0.5"></i> Mantén tus datos siempre vivos</li>
+                    </ul>
+                </div>
+
+                <!-- 3: Procesos ETL -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 hover:-translate-y-1 reveal group relative overflow-hidden" style="transition-delay: 100ms;">
+                    <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-purple-400 to-purple-600"></div>
+                    <div class="w-14 h-14 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center mb-6 ml-2 group-hover:bg-purple-600 group-hover:text-white transition-colors duration-300 shadow-sm">
+                        <i data-lucide="cog" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 pl-2">Procesos ETL</h4>
+                    <ul class="text-gray-600 space-y-3 mt-4 text-sm pl-2">
+                        <li class="flex items-start gap-2"><i data-lucide="code-2" class="text-purple-400 w-4 h-4 shrink-0 mt-0.5"></i> Extracción y carga sin código</li>
+                        <li class="flex items-start gap-2"><i data-lucide="badge-check" class="text-purple-400 w-4 h-4 shrink-0 mt-0.5"></i> Validación automática de calidad</li>
+                        <li class="flex items-start gap-2"><i data-lucide="monitor" class="text-purple-400 w-4 h-4 shrink-0 mt-0.5"></i> Dashboards de monitoreo de logs</li>
+                    </ul>
+                </div>
+
+                <!-- 4: Generación de Reportes -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 hover:-translate-y-1 reveal group relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-orange-400 to-orange-600"></div>
+                    <div class="w-14 h-14 bg-orange-50 text-secondary rounded-2xl flex items-center justify-center mb-6 ml-2 group-hover:bg-secondary group-hover:text-white transition-colors duration-300 shadow-sm">
+                        <i data-lucide="file-bar-chart" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 pl-2">Generación de Reportes</h4>
+                    <ul class="text-gray-600 space-y-3 mt-4 text-sm pl-2">
+                        <li class="flex items-start gap-2"><i data-lucide="send" class="text-orange-400 w-4 h-4 shrink-0 mt-0.5"></i> Envíos automáticos por correo</li>
+                        <li class="flex items-start gap-2"><i data-lucide="user-check" class="text-orange-400 w-4 h-4 shrink-0 mt-0.5"></i> Personalización por destinatario</li>
+                        <li class="flex items-start gap-2"><i data-lucide="calendar-clock" class="text-orange-400 w-4 h-4 shrink-0 mt-0.5"></i> Programación (Diario/Semanal)</li>
+                    </ul>
+                </div>
+
+                <!-- 5: Webhooks en Vivo -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 hover:-translate-y-1 reveal group relative overflow-hidden" style="transition-delay: 50ms;">
+                    <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-brandTurquoise to-teal-600"></div>
+                    <div class="w-14 h-14 bg-brandTurquoise/10 text-brandTurquoise rounded-2xl flex items-center justify-center mb-6 ml-2 group-hover:bg-brandTurquoise group-hover:text-white transition-colors duration-300 shadow-sm">
+                        <i data-lucide="radio-tower" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 pl-2">Webhooks en Vivo</h4>
+                    <ul class="text-gray-600 space-y-3 mt-4 text-sm pl-2">
+                        <li class="flex items-start gap-2"><i data-lucide="radar" class="text-teal-400 w-4 h-4 shrink-0 mt-0.5"></i> Listeners constantes de eventos</li>
+                        <li class="flex items-start gap-2"><i data-lucide="zap" class="text-teal-400 w-4 h-4 shrink-0 mt-0.5"></i> Sincronización instantánea</li>
+                        <li class="flex items-start gap-2"><i data-lucide="timer" class="text-teal-400 w-4 h-4 shrink-0 mt-0.5"></i> Gatillo de respuestas inmediatas</li>
+                    </ul>
+                </div>
+
+                <!-- 6: Calidad de Datos -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 hover:-translate-y-1 reveal group relative overflow-hidden" style="transition-delay: 100ms;">
+                    <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-brandGreen to-green-600"></div>
+                    <div class="w-14 h-14 bg-brandGreen/10 text-brandGreen rounded-2xl flex items-center justify-center mb-6 ml-2 group-hover:bg-brandGreen group-hover:text-white transition-colors duration-300 shadow-sm">
+                        <i data-lucide="shield-check" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 pl-2">Calidad de Datos</h4>
+                    <ul class="text-gray-600 space-y-3 mt-4 text-sm pl-2">
+                        <li class="flex items-start gap-2"><i data-lucide="search-x" class="text-green-400 w-4 h-4 shrink-0 mt-0.5"></i> Detección de anomalías y nulos</li>
+                        <li class="flex items-start gap-2"><i data-lucide="clipboard-check" class="text-green-400 w-4 h-4 shrink-0 mt-0.5"></i> Reportes automatizados de QA</li>
+                        <li class="flex items-start gap-2"><i data-lucide="filter" class="text-green-400 w-4 h-4 shrink-0 mt-0.5"></i> Filtrado y limpieza en vuelo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer snippet -->
+    <footer class="bg-[#10171f] text-gray-300 pt-16 pb-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div class="lg:col-span-1">
+                    <span class="block text-3xl font-bold text-white mb-4">Analytics<span class="text-secondary">360</span></span>
+                    <p class="text-sm text-gray-400 mb-6 font-medium tracking-wide">Decisiones basadas en datos.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 text-lg">Enlaces Rápidos</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="/" class="hover:text-secondary transition-colors">Inicio</a></li>
+                        <li><a href="/servicios.html" class="hover:text-secondary transition-colors">Servicios</a></li>
+                        <li><a href="/automatizaciones.html" class="hover:text-secondary transition-colors text-secondary">Automatizaciones</a></li>
+                        <li><a href="/nosotros.html" class="hover:text-secondary transition-colors">Nosotros</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+                <p>&copy; 2026 Analytics360. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Animation -->
+    <style>
+        @keyframes slide {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+    </style>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
