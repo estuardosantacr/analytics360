@@ -19,18 +19,36 @@
   /* Reveal classes */
   .reveal {
     opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease-out;
+    transform: translateY(40px);
+    transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 1s cubic-bezier(0.22, 1, 0.36, 1);
   }
   .reveal.fade-left {
-    transform: translateX(-30px);
+    transform: translateX(-60px);
   }
   .reveal.fade-right {
-    transform: translateX(30px);
+    transform: translateX(60px);
+  }
+  .reveal.fade-scale {
+    transform: scale(0.92);
   }
   .reveal.active {
     opacity: 1;
-    transform: translate(0);
+    transform: translate(0) scale(1);
+  }
+
+  /* Auto-stagger children inside grids when parent has reveal */
+  .reveal.active > * { opacity: 1; transform: translateY(0); }
+  .reveal > *:not(div):not(h2):not(h3):not(p):not(span):not(a) { opacity: 1; }
+  .reveal [data-stagger-child] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .reveal.active [data-stagger-child] {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   /* Modal animation */

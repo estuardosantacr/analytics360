@@ -7,8 +7,8 @@
     <title>Nosotros | Analytics360</title>
     <meta name="description" content="Conozca a Analytics360, su aliado estratégico en analítica de datos y automatización.">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/assets/main-DRgvqRWo.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/main-Jwv7BxTi.css">
+  <script type="module" crossorigin src="/assets/main-DHK_dyKP.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-DZ5avGyV.css">
 </head>
 <body class="font-sans text-primary bg-gray-50 overflow-x-hidden pt-20">
 
@@ -135,116 +135,120 @@
     <section class="py-20 bg-primary text-white">
         <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
             <h2 class="text-2xl font-bold mb-10 text-center reveal">¿Por qué elegir Analytics360?</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 reveal">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 reveal">
                 <div class="text-center group">
                     <div class="w-16 h-16 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-secondary transition-colors">
                         <i data-lucide="award" class="w-8 h-8 text-white"></i>
                     </div>
-                    <h4 class="font-semibold text-sm">Consultores Certificados PBI/DAX</h4>
+                    <h4 class="font-semibold text-sm mb-2">Consultores Certificados PBI/DAX</h4>
+                    <p class="text-xs text-gray-400">Profesionales altamente especializados con certificaciones reconocidas en Power BI y DAX avanzado.</p>
                 </div>
                 <div class="text-center group">
                     <div class="w-16 h-16 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-secondary transition-colors">
                         <i data-lucide="zap" class="w-8 h-8 text-white"></i>
                     </div>
-                    <h4 class="font-semibold text-sm">Metodología Ágil e Incremental</h4>
+                    <h4 class="font-semibold text-sm mb-2">Metodología Ágil e Incremental</h4>
+                    <p class="text-xs text-gray-400">Enfoque flexible que entrega valor continuamente mientras adaptamos las soluciones a sus necesidades.</p>
                 </div>
                 <div class="text-center group">
                     <div class="w-16 h-16 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-secondary transition-colors">
                         <i data-lucide="pie-chart" class="w-8 h-8 text-white"></i>
                     </div>
-                    <h4 class="font-semibold text-sm">ROI Medible en todo proyecto</h4>
+                    <h4 class="font-semibold text-sm mb-2">ROI Medible en todo proyecto</h4>
+                    <p class="text-xs text-gray-400">Resultados concretos y medibles desde las primeras semanas de implementación.</p>
                 </div>
                 <div class="text-center group">
                     <div class="w-16 h-16 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-secondary transition-colors">
                         <i data-lucide="headphones" class="w-8 h-8 text-white"></i>
                     </div>
-                    <h4 class="font-semibold text-sm">Soporte Continuo</h4>
+                    <h4 class="font-semibold text-sm mb-2">Soporte Continuo</h4>
+                    <p class="text-xs text-gray-400">Disponibilidad 24/7 para garantizar que sus sistemas funcionen sin interrupciones.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonios completos -->
+    <!-- FAQ Section -->
     <section class="py-24 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
-            <h2 class="text-center text-3xl font-bold mb-16 reveal">Impacto Comprobado en la Industria</h2>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- 1 -->
-                <div class="bg-white rounded-2xl p-8 border-t-4 border-secondary shadow-sm hover:shadow-md transition-all reveal">
-                    <i data-lucide="quote" class="w-10 h-10 text-gray-200 mb-4"></i>
-                    <p class="text-gray-600 italic mb-6 text-sm flex-1">"Antes perdíamos horas consolidando datos de ventas manualmente. Con Analytics360, ahora tenemos dashboards en tiempo real que nos permiten tomar decisiones inmediatas. El retorno de inversión fue evidente en los primeros 3 meses."</p>
-                    <div class="flex items-center gap-4 mt-auto">
-                        <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold">M</div>
-                        <div>
-                            <h5 class="font-bold text-primary text-sm">María González</h5>
-                            <p class="text-xs text-gray-500">RetailMax Guatemala (Retail)</p>
+        <div class="max-w-4xl mx-auto px-6 md:px-8 lg:px-12">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-secondary font-semibold tracking-wide uppercase text-sm mb-2">Preguntas Frecuentes</h2>
+                <h3 class="text-3xl md:text-4xl font-bold">Resolvemos sus dudas</h3>
+                <div class="w-20 h-1 bg-secondary mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="space-y-4 reveal" id="faq-accordion">
+                <!-- FAQ 1 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition-colors">
+                        <span class="font-bold text-lg pr-4">¿Cuánto tiempo toma implementar un dashboard?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-secondary shrink-0 transition-transform duration-300 faq-icon"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                        <p class="px-6 pb-6 text-gray-600 leading-relaxed">Primera versión funcional en 2 semanas. Proyecto completo típico: 4-6 semanas con entregas semanales. No esperará meses para ver resultados.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition-colors">
+                        <span class="font-bold text-lg pr-4">¿Qué pasa si mis datos están desorganizados?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-secondary shrink-0 transition-transform duration-300 faq-icon"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                        <p class="px-6 pb-6 text-gray-600 leading-relaxed">Ese es precisamente nuestro trabajo. El 80% de nuestros clientes llegan con datos en múltiples Excel, sistemas desconectados y sin estructura. Lo limpiamos, organizamos e integramos todo.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition-colors">
+                        <span class="font-bold text-lg pr-4">¿Necesito comprar Power BI o licencias especiales?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-secondary shrink-0 transition-transform duration-300 faq-icon"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                        <p class="px-6 pb-6 text-gray-600 leading-relaxed">Le asesoramos sobre las licencias necesarias según su caso. Muchos proyectos funcionan con Power BI Desktop (gratis) o Power BI Pro ($10/usuario/mes). Le ayudamos a optimizar costos.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition-colors">
+                        <span class="font-bold text-lg pr-4">¿Capacitan a nuestro equipo?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-secondary shrink-0 transition-transform duration-300 faq-icon"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                        <p class="px-6 pb-6 text-gray-600 leading-relaxed">Sí, incluido en todos nuestros proyectos. Sesiones hands-on para que su equipo sepa usar, interpretar y mantener los dashboards. Documentación completa incluida.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition-colors">
+                        <span class="font-bold text-lg pr-4">¿Ofrecen garantías?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-secondary shrink-0 transition-transform duration-300 faq-icon"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="px-6 pb-6 text-gray-600 leading-relaxed">
+                            <ul class="space-y-2">
+                                <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-brandGreen shrink-0"></i> Consulta inicial 100% gratuita</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-brandGreen shrink-0"></i> Propuesta sin compromiso</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-brandGreen shrink-0"></i> Entregas semanales (ve progreso constantemente)</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-brandGreen shrink-0"></i> Precio fijo acordado (sin sorpresas)</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-brandGreen shrink-0"></i> Soporte post-implementación incluido</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
 
-                <!-- 2 -->
-                <div class="bg-white rounded-2xl p-8 border-t-4 border-secondary shadow-sm hover:shadow-md transition-all reveal" style="transition-delay: 50ms;">
-                    <i data-lucide="quote" class="w-10 h-10 text-gray-200 mb-4"></i>
-                    <p class="text-gray-600 italic mb-6 text-sm flex-1">"La automatización de nuestros reportes nos ha ahorrado más de 40 horas de trabajo. El equipo de Analytics360 entendió perfectamente nuestras necesidades y entregó una solución sólida. Excelente profesionalismo."</p>
-                    <div class="flex items-center gap-4 mt-auto">
-                        <div class="w-12 h-12 rounded-full bg-brandTurquoise text-white flex items-center justify-center font-bold">C</div>
-                        <div>
-                            <h5 class="font-bold text-primary text-sm">Carlos Méndez</h5>
-                            <p class="text-xs text-gray-500">Grupo Financiero (Finanzas)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 3 -->
-                <div class="bg-white rounded-2xl p-8 border-t-4 border-secondary shadow-sm hover:shadow-md transition-all reveal" style="transition-delay: 100ms;">
-                    <i data-lucide="quote" class="w-10 h-10 text-gray-200 mb-4"></i>
-                    <p class="text-gray-600 italic mb-6 text-sm flex-1">"Implementaron un sistema de monitoreo que redujo nuestros tiempos de respuesta en un 35%. La visualización de los KPIs nos permite identificar problemas antes de que se conviertan en crisis. Muy recomendados."</p>
-                    <div class="flex items-center gap-4 mt-auto">
-                        <div class="w-12 h-12 rounded-full bg-brandGreen text-white flex items-center justify-center font-bold">A</div>
-                        <div>
-                            <h5 class="font-bold text-primary text-sm">Ana Rodríguez</h5>
-                            <p class="text-xs text-gray-500">LogiExpress (Logística)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 4 -->
-                <div class="bg-white rounded-2xl p-8 border-t-4 border-secondary shadow-sm hover:shadow-md transition-all reveal">
-                    <i data-lucide="quote" class="w-10 h-10 text-gray-200 mb-4"></i>
-                    <p class="text-gray-600 italic mb-6 text-sm flex-1">"El dashboard de OEE nos dio visibilidad completa de nuestra planta. Detectamos cuellos de botella y mejoramos nuestra eficiencia en un 12%. La inversión se pagó sola en 6 meses."</p>
-                    <div class="flex items-center gap-4 mt-auto">
-                        <div class="w-12 h-12 rounded-full bg-purple-500 text-white flex items-center justify-center font-bold">R</div>
-                        <div>
-                            <h5 class="font-bold text-primary text-sm">Roberto Castillo</h5>
-                            <p class="text-xs text-gray-500">TechManufactura (Manufactura)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 5 -->
-                <div class="bg-white rounded-2xl p-8 border-t-4 border-secondary shadow-sm hover:shadow-md transition-all reveal" style="transition-delay: 50ms;">
-                    <i data-lucide="quote" class="w-10 h-10 text-gray-200 mb-4"></i>
-                    <p class="text-gray-600 italic mb-6 text-sm flex-1">"Finalmente entendemos qué canales de marketing funcionan. El análisis de ROI nos permitió reasignar presupuesto, incrementando conversiones en un 45%. Trabajo impecable."</p>
-                    <div class="flex items-center gap-4 mt-auto">
-                        <div class="w-12 h-12 rounded-full bg-secondary text-white flex items-center justify-center font-bold">P</div>
-                        <div>
-                            <h5 class="font-bold text-primary text-sm">Patricia Hernández</h5>
-                            <p class="text-xs text-gray-500">MarketDigital Pro</p>
-                        </div>
-                    </div>
-                </div>
-
-                 <!-- 6 -->
-                 <div class="bg-white rounded-2xl p-8 border-t-4 border-secondary shadow-sm hover:shadow-md transition-all reveal" style="transition-delay: 100ms;">
-                    <i data-lucide="quote" class="w-10 h-10 text-gray-200 mb-4"></i>
-                    <p class="text-gray-600 italic mb-6 text-sm flex-1">"La trazabilidad de procesos de exportación mejoró radicalmente. Redujimos mermas en un 18% y mejoramos la satisfacción del cliente. Altamente profesionales."</p>
-                    <div class="flex items-center gap-4 mt-auto">
-                        <div class="w-12 h-12 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold">L</div>
-                        <div>
-                            <h5 class="font-bold text-primary text-sm">Luis Morales</h5>
-                            <p class="text-xs text-gray-500">AgroExport Solutions</p>
-                        </div>
+                <!-- FAQ 6 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition-colors">
+                        <span class="font-bold text-lg pr-4">¿Cómo empezamos?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-secondary shrink-0 transition-transform duration-300 faq-icon"></i>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                        <p class="px-6 pb-6 text-gray-600 leading-relaxed">Es simple: agende una llamada gratuita de 30 minutos, reciba una propuesta en 48 horas, y vea resultados en 2 semanas. Sin riesgos, sin compromisos iniciales.</p>
                     </div>
                 </div>
             </div>
@@ -276,6 +280,20 @@
     </footer>
 
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        function toggleFaq(btn) {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('.faq-icon');
+            const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+            document.querySelectorAll('.faq-content').forEach(c => { c.style.maxHeight = '0px'; });
+            document.querySelectorAll('.faq-icon').forEach(i => { i.style.transform = 'rotate(0deg)'; });
+            if (!isOpen) {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.style.transform = 'rotate(180deg)';
+                if (window.lucide) lucide.createIcons();
+            }
+        }
+    </script>
 </body>
 </html>
 
