@@ -6,6 +6,19 @@
     <link rel="icon" type="image/png" href="/analytics360/Analytics360-imagotipo-azul-y-amarillo-fondo-tranparente.png">
     <title>Nosotros | Analytics360</title>
     <meta name="description" content="Conozca a Analytics360, su aliado estratégico en analítica de datos y automatización.">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://analytics360.net/nosotros.html">
+    <meta property="og:title" content="Nosotros | Analytics360">
+    <meta property="og:description" content="Conozca a Analytics360, su aliado estratégico en analítica de datos y automatización en Centroamérica.">
+    <meta property="og:image" content="https://analytics360.net/analytics360/Analytics360-azul-y-amarillo.png">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nosotros | Analytics360">
+    <meta name="twitter:description" content="Conozca a Analytics360, su aliado estratégico en analítica de datos y automatización en Centroamérica.">
+    <meta name="twitter:image" content="https://analytics360.net/analytics360/Analytics360-azul-y-amarillo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/style.css">
 </head>
@@ -16,7 +29,7 @@
         <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between p-4 px-6 md:px-8 lg:px-12">
             <a href="/" class="flex items-center -space-x-1"><img src="/analytics360/Analytics360-imagotipo-azul-y-amarillo-fondo-tranparente.png" alt="Analytics360 Logo" class="h-28 w-auto"><span class="self-center text-2xl font-bold whitespace-nowrap text-primary">Analytics<span class="text-secondary">360</span></span></a>
             <div class="flex md:order-2 space-x-3 rtl:space-x-reverse">
-                <a href="/contacto.html" class="text-white bg-secondary hover:bg-orange-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-transform hover:scale-105 shadow-md">Contactar</a>
+                <a href="/contacto.html" class="text-white bg-secondary hover:bg-orange-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center shadow-md btn-nav btn-ripple">Contactar</a>
                 <button id="menu-btn" type="button" class="md:hidden justify-center items-center text-gray-500 rounded-lg w-10 h-10 hover:bg-gray-100 focus:outline-none">
                     <span class="sr-only">Abrir menú</span><i data-lucide="menu" class="w-6 h-6"></i>
                 </button>
@@ -34,9 +47,21 @@
     </nav>
 
     <!-- Header Hero -->
-    <header class="bg-primary pt-24 pb-20 px-6 text-center relative overflow-hidden">
+    <header class="bg-gradient-to-br from-[#0f1923] via-[#1d2937] to-[#10171f] pt-24 pb-24 px-6 text-center relative overflow-hidden">
+        <!-- Dot grid -->
+        <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle, #fff 1px, transparent 1px); background-size: 40px 40px;"></div>
+        <!-- Floating particles -->
+        <div class="absolute top-[20%] left-[12%] w-1 h-1 bg-secondary/50 rounded-full animate-[float_6s_ease-in-out_infinite]"></div>
+        <div class="absolute top-[35%] right-[18%] w-1.5 h-1.5 bg-brandTurquoise/40 rounded-full animate-[float_8s_ease-in-out_infinite_1s]"></div>
+        <div class="absolute top-[65%] left-[70%] w-1 h-1 bg-blue-400/30 rounded-full animate-[float_7s_ease-in-out_infinite_2s]"></div>
+        <!-- Glow orbs -->
+        <div class="absolute -top-20 -left-20 w-[400px] h-[400px] rounded-full bg-secondary/5 blur-[100px] animate-[pulse_5s_ease-in-out_infinite]"></div>
+        <div class="absolute -bottom-20 -right-20 w-[300px] h-[300px] rounded-full bg-brandTurquoise/5 blur-[100px] animate-[pulse_6s_ease-in-out_infinite_2s]"></div>
         <div class="max-w-4xl mx-auto relative z-10 reveal">
-            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Nuestra <span class="text-secondary">Esencia</span></h1>
+            <span class="inline-flex items-center gap-2 mb-4 bg-secondary/20 text-orange-400 px-4 py-1 rounded-full text-sm font-semibold border border-secondary/30">
+                <i data-lucide="users" class="w-4 h-4"></i> Conozca nuestro equipo
+            </span>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Nuestra <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary via-yellow-400 to-secondary bg-[length:200%_auto] animate-[shimmer_3s_linear_infinite]">Esencia</span></h1>
             <p class="text-xl text-gray-300 font-light mb-8 max-w-3xl mx-auto">
                 No somos solo consultores técnicos, somos sus aliados estratégicos en la transformación de la cultura de datos.
             </p>
@@ -44,11 +69,11 @@
     </header>
 
     <!-- Quienes Somos -->
-    <section class="max-w-7xl mx-auto px-6 py-20 bg-white shadow-xl rounded-2xl -mt-10 relative z-10 mx-6 lg:mx-auto reveal border border-gray-100">
+    <section class="max-w-7xl mx-auto px-6 py-20 bg-white shadow-xl rounded-2xl -mt-10 relative z-10 mx-6 lg:mx-auto reveal border border-gray-100 card-glow">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
             <div>
                 <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
-                    <div class="w-10 h-1bg-secondary rounded-full"></div> ¿Quiénes Somos?
+                    <div class="animated-underline"></div> ¿Quiénes Somos?
                 </h2>
                 <div class="space-y-4 text-gray-600 text-lg">
                     <p>
@@ -64,13 +89,13 @@
             </div>
             
             <div class="grid grid-cols-2 gap-6">
-                <div class="bg-gradient-to-br from-[#1d2937] to-[#2c3e50] text-white p-6 rounded-2xl shadow-lg hover:-translate-y-2 transition-transform duration-300">
-                    <i data-lucide="eye" class="w-10 h-10 text-secondary mb-4"></i>
+                <div class="bg-gradient-to-br from-[#1d2937] to-[#2c3e50] text-white p-6 rounded-2xl shadow-lg hover-lift tilt-card card-glow transition-all duration-300">
+                    <i data-lucide="eye" class="w-10 h-10 text-secondary mb-4 icon-hover-rotate"></i>
                     <h3 class="text-xl font-bold mb-3">Visión</h3>
                     <p class="text-sm text-gray-300">Impulsar la creación de valor mediante soluciones tecnológicas innovadoras, facilitando que las organizaciones tomen decisiones basadas en información oportuna.</p>
                 </div>
-                <div class="bg-gradient-to-br from-secondary to-orange-400 text-white p-6 rounded-2xl shadow-lg hover:-translate-y-2 transition-transform duration-300 transform translate-y-6">
-                    <i data-lucide="target" class="w-10 h-10 text-white mb-4"></i>
+                <div class="bg-gradient-to-br from-secondary to-orange-400 text-white p-6 rounded-2xl shadow-lg hover-lift tilt-card transition-all duration-300 transform translate-y-6">
+                    <i data-lucide="target" class="w-10 h-10 text-white mb-4 icon-hover-rotate"></i>
                     <h3 class="text-xl font-bold mb-3">Misión</h3>
                     <p class="text-sm text-white/90">Consolidarnos como referentes en Centroamérica en analítica de datos y automatización, ayudando a transformar datos en resultados reales.</p>
                 </div>
@@ -82,14 +107,17 @@
     <section class="py-24 bg-gray-50">
         <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
             <h2 class="text-center text-sm font-bold text-secondary tracking-widest uppercase mb-2 reveal">Nuestros Valores</h2>
-            <h3 class="text-center text-3xl font-bold mb-16 reveal">NUESTROS CLIENTES SON PRIMERO</h3>
+            <div class="text-center mb-16 reveal">
+                <h3 class="text-3xl font-bold">NUESTROS CLIENTES SON PRIMERO</h3>
+                <div class="animated-underline mx-auto mt-4"></div>
+            </div>
 
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- 1: Confidencialidad -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all reveal group relative overflow-hidden">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all hover-lift service-card reveal group relative overflow-hidden">
                     <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-red-400 to-red-600"></div>
                     <div class="w-14 h-14 bg-red-50 text-red-500 rounded-2xl flex items-center justify-center mb-6 ml-2 group-hover:bg-red-500 group-hover:text-white transition-colors duration-300 shadow-sm">
-                        <i data-lucide="shield" class="w-7 h-7"></i>
+                        <i data-lucide="shield" class="w-7 h-7 icon-hover-rotate"></i>
                     </div>
                     <h4 class="text-xl font-bold mb-4 pl-2">Confidencialidad</h4>
                     <ul class="text-gray-600 space-y-3 text-sm pl-2">
@@ -100,10 +128,10 @@
                 </div>
 
                 <!-- 2: Flexibilidad -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all reveal group relative overflow-hidden" style="transition-delay: 100ms;">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all hover-lift service-card reveal group relative overflow-hidden" style="transition-delay: 100ms;">
                     <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-blue-400 to-blue-600"></div>
                     <div class="w-14 h-14 bg-blue-50 text-blue-500 rounded-2xl flex items-center justify-center mb-6 ml-2 group-hover:bg-blue-500 group-hover:text-white transition-colors duration-300 shadow-sm">
-                        <i data-lucide="settings-2" class="w-7 h-7"></i>
+                        <i data-lucide="settings-2" class="w-7 h-7 icon-hover-rotate"></i>
                     </div>
                     <h4 class="text-xl font-bold mb-4 pl-2">Flexibilidad</h4>
                     <ul class="text-gray-600 space-y-3 text-sm pl-2">
@@ -114,10 +142,10 @@
                 </div>
 
                 <!-- 3: Profesionalismo -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all reveal group relative overflow-hidden" style="transition-delay: 200ms;">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all hover-lift service-card reveal group relative overflow-hidden" style="transition-delay: 200ms;">
                     <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-amber-400 to-amber-600"></div>
                     <div class="w-14 h-14 bg-amber-50 text-amber-500 rounded-2xl flex items-center justify-center mb-6 ml-2 group-hover:bg-amber-500 group-hover:text-white transition-colors duration-300 shadow-sm">
-                        <i data-lucide="trophy" class="w-7 h-7"></i>
+                        <i data-lucide="trophy" class="w-7 h-7 icon-hover-rotate"></i>
                     </div>
                     <h4 class="text-xl font-bold mb-4 pl-2">Profesionalismo</h4>
                     <ul class="text-gray-600 space-y-3 text-sm pl-2">
@@ -133,32 +161,35 @@
     <!-- Por Qué Elegirnos -->
     <section class="py-20 bg-primary text-white">
         <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
-            <h2 class="text-2xl font-bold mb-10 text-center reveal">¿Por qué elegir Analytics360?</h2>
+            <div class="text-center mb-10 reveal">
+                <h2 class="text-2xl font-bold">¿Por qué elegir Analytics360?</h2>
+                <div class="animated-underline mx-auto mt-4"></div>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 reveal">
-                <div class="text-center group">
-                    <div class="w-16 h-16 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-secondary transition-colors">
-                        <i data-lucide="award" class="w-8 h-8 text-white"></i>
+                <div class="text-center group hover-lift">
+                    <div class="w-16 h-16 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-secondary transition-colors duration-300">
+                        <i data-lucide="award" class="w-8 h-8 text-white icon-hover-rotate"></i>
                     </div>
                     <h4 class="font-semibold text-sm mb-2">Consultores Certificados PBI/DAX</h4>
                     <p class="text-xs text-gray-400">Profesionales altamente especializados con certificaciones reconocidas en Power BI y DAX avanzado.</p>
                 </div>
-                <div class="text-center group">
-                    <div class="w-16 h-16 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-secondary transition-colors">
-                        <i data-lucide="zap" class="w-8 h-8 text-white"></i>
+                <div class="text-center group hover-lift">
+                    <div class="w-16 h-16 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-secondary transition-colors duration-300">
+                        <i data-lucide="zap" class="w-8 h-8 text-white icon-hover-rotate"></i>
                     </div>
                     <h4 class="font-semibold text-sm mb-2">Metodología Ágil e Incremental</h4>
                     <p class="text-xs text-gray-400">Enfoque flexible que entrega valor continuamente mientras adaptamos las soluciones a sus necesidades.</p>
                 </div>
-                <div class="text-center group">
-                    <div class="w-16 h-16 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-secondary transition-colors">
-                        <i data-lucide="pie-chart" class="w-8 h-8 text-white"></i>
+                <div class="text-center group hover-lift">
+                    <div class="w-16 h-16 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-secondary transition-colors duration-300">
+                        <i data-lucide="pie-chart" class="w-8 h-8 text-white icon-hover-rotate"></i>
                     </div>
                     <h4 class="font-semibold text-sm mb-2">ROI Medible en todo proyecto</h4>
                     <p class="text-xs text-gray-400">Resultados concretos y medibles desde las primeras semanas de implementación.</p>
                 </div>
-                <div class="text-center group">
-                    <div class="w-16 h-16 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-secondary transition-colors">
-                        <i data-lucide="headphones" class="w-8 h-8 text-white"></i>
+                <div class="text-center group hover-lift">
+                    <div class="w-16 h-16 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-secondary transition-colors duration-300">
+                        <i data-lucide="headphones" class="w-8 h-8 text-white icon-hover-rotate"></i>
                     </div>
                     <h4 class="font-semibold text-sm mb-2">Soporte Continuo</h4>
                     <p class="text-xs text-gray-400">Disponibilidad 24/7 para garantizar que sus sistemas funcionen sin interrupciones.</p>
@@ -173,12 +204,12 @@
             <div class="text-center mb-16 reveal">
                 <h2 class="text-secondary font-semibold tracking-wide uppercase text-sm mb-2">Preguntas Frecuentes</h2>
                 <h3 class="text-3xl md:text-4xl font-bold">Resolvemos sus dudas</h3>
-                <div class="w-20 h-1 bg-secondary mx-auto mt-6 rounded-full"></div>
+                <div class="animated-underline mx-auto mt-6"></div>
             </div>
 
             <div class="space-y-4 reveal" id="faq-accordion">
                 <!-- FAQ 1 -->
-                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300">
                     <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition-colors">
                         <span class="font-bold text-lg pr-4">¿Cuánto tiempo toma implementar un dashboard?</span>
                         <i data-lucide="chevron-down" class="w-5 h-5 text-secondary shrink-0 transition-transform duration-300 faq-icon"></i>
@@ -189,7 +220,7 @@
                 </div>
 
                 <!-- FAQ 2 -->
-                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300">
                     <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition-colors">
                         <span class="font-bold text-lg pr-4">¿Qué pasa si mis datos están desorganizados?</span>
                         <i data-lucide="chevron-down" class="w-5 h-5 text-secondary shrink-0 transition-transform duration-300 faq-icon"></i>
@@ -200,7 +231,7 @@
                 </div>
 
                 <!-- FAQ 3 -->
-                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300">
                     <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition-colors">
                         <span class="font-bold text-lg pr-4">¿Necesito comprar Power BI o licencias especiales?</span>
                         <i data-lucide="chevron-down" class="w-5 h-5 text-secondary shrink-0 transition-transform duration-300 faq-icon"></i>
@@ -211,7 +242,7 @@
                 </div>
 
                 <!-- FAQ 4 -->
-                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300">
                     <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition-colors">
                         <span class="font-bold text-lg pr-4">¿Capacitan a nuestro equipo?</span>
                         <i data-lucide="chevron-down" class="w-5 h-5 text-secondary shrink-0 transition-transform duration-300 faq-icon"></i>
@@ -222,7 +253,7 @@
                 </div>
 
                 <!-- FAQ 5 -->
-                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300">
                     <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition-colors">
                         <span class="font-bold text-lg pr-4">¿Ofrecen garantías?</span>
                         <i data-lucide="chevron-down" class="w-5 h-5 text-secondary shrink-0 transition-transform duration-300 faq-icon"></i>
@@ -241,7 +272,7 @@
                 </div>
 
                 <!-- FAQ 6 -->
-                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300">
                     <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition-colors">
                         <span class="font-bold text-lg pr-4">¿Cómo empezamos?</span>
                         <i data-lucide="chevron-down" class="w-5 h-5 text-secondary shrink-0 transition-transform duration-300 faq-icon"></i>
@@ -254,29 +285,62 @@
         </div>
     </section>
 
-    <!-- Footer snippet -->
+    <!-- Footer -->
     <footer class="bg-[#10171f] text-gray-300 pt-16 pb-8 border-t border-white/10">
         <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 <div class="lg:col-span-1">
                     <span class="block text-3xl font-bold text-white mb-4">Analytics<span class="text-secondary">360</span></span>
-                    <p class="text-sm text-gray-400 mb-6 font-medium tracking-wide">Decisiones basadas en datos.</p>
+                    <p class="text-sm text-gray-400 mb-6 font-medium tracking-wide border-l-2 border-secondary pl-4">Decisiones basadas en datos.</p>
+                    <p class="text-sm text-gray-400 leading-relaxed">Transformamos la cultura de datos en Centroamérica, convirtiendo información compleja en decisiones estratégicas claras.</p>
                 </div>
                 <div>
                     <h4 class="text-white font-bold mb-6 text-lg">Enlaces Rápidos</h4>
                     <ul class="space-y-3 text-sm">
                         <li><a href="/" class="hover:text-secondary transition-colors">Inicio</a></li>
                         <li><a href="/servicios.html" class="hover:text-secondary transition-colors">Servicios</a></li>
+                        <li><a href="/portafolio.html" class="hover:text-secondary transition-colors">Portafolio</a></li>
                         <li><a href="/automatizaciones.html" class="hover:text-secondary transition-colors">Automatizaciones</a></li>
-                        <li><a href="/nosotros.html" class="hover:text-secondary transition-colors text-secondary">Nosotros</a></li>
+                        <li><a href="/nosotros.html" class="hover:text-secondary transition-colors">Nosotros</a></li>
                     </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 text-lg">Servicios Principales</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="/servicios.html" class="hover:text-secondary transition-colors">Dashboards Power BI</a></li>
+                        <li><a href="/servicios.html" class="hover:text-secondary transition-colors">Modelado de Datos</a></li>
+                        <li><a href="/automatizaciones.html" class="hover:text-secondary transition-colors">Automatización n8n</a></li>
+                        <li><a href="/servicios.html" class="hover:text-secondary transition-colors">Consultoría Estratégica</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 text-lg">Contacto</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-secondary shrink-0"></i><span>Guatemala, Centroamérica</span></li>
+                        <li class="flex items-center gap-3"><i data-lucide="mail" class="w-5 h-5 text-secondary shrink-0"></i><a href="mailto:info@analytics360.net" class="hover:text-white transition-colors">info@analytics360.net</a></li>
+                        <li class="flex items-center gap-3"><i data-lucide="phone" class="w-5 h-5 text-secondary shrink-0"></i><a href="https://wa.me/50257656833" class="hover:text-white transition-colors">+502 5765-6833</a></li>
+                    </ul>
+                    <div class="mt-6 flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-secondary hover:text-white transition-all"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-secondary hover:text-white transition-all"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
                 <p>&copy; 2026 Analytics360. Todos los derechos reservados.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-white">Política de Privacidad</a>
+                    <a href="#" class="hover:text-white">Términos de Servicio</a>
+                </div>
             </div>
         </div>
     </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/50257656833?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20sus%20servicios" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full shadow-lg hover:shadow-xl flex items-center justify-center transition-all hover:scale-110 group whatsapp-animated" aria-label="Contactar por WhatsApp">
+        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span class="absolute right-full mr-3 bg-white text-gray-800 text-sm font-semibold px-4 py-2 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">¿Necesita ayuda? Escríbanos</span>
+    </a>
 
     <script src="https://unpkg.com/lucide@latest"></script>
     <script type="module" src="/src/main.js"></script>

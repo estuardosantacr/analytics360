@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Build output (Netlify lo genera automáticamente)
+dist/
+
+# Vite cache
+.vite/
+node_modules/.vite/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local env
+.env
+.env.local
+.env.*.local
+
+# Claude local settings (mantener launch.json compartido)
+.claude/settings.local.json

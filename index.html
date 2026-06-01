@@ -6,7 +6,18 @@
     <link rel="icon" type="image/png" href="/analytics360/Analytics360-imagotipo-azul-y-amarillo-fondo-tranparente.png">
     <title>Analytics360 | Decisiones basadas en datos</title>
     <meta name="description" content="Consultoría de Business Intelligence, Power BI y Automatización de Procesos en Guatemala.">
-    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://analytics360.net/">
+    <meta property="og:title" content="Analytics360 | Decisiones basadas en datos">
+    <meta property="og:description" content="Consultoría de Business Intelligence, Power BI y Automatización de Procesos en Guatemala.">
+    <meta property="og:image" content="https://analytics360.net/analytics360/Analytics360-azul-y-amarillo.png">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Analytics360 | Decisiones basadas en datos">
+    <meta name="twitter:description" content="Consultoría de Business Intelligence, Power BI y Automatización de Procesos en Guatemala.">
+    <meta name="twitter:image" content="https://analytics360.net/analytics360/Analytics360-azul-y-amarillo.png">
+
     <!-- Google Fonts: Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +33,7 @@
         <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between p-4 px-6 md:px-8 lg:px-12">
             <a href="/" class="flex items-center -space-x-1"><img src="/analytics360/Analytics360-imagotipo-azul-y-amarillo-fondo-tranparente.png" alt="Analytics360 Logo" class="h-28 w-auto"><span class="self-center text-2xl font-bold whitespace-nowrap text-primary">Analytics<span class="text-secondary">360</span></span></a>
             <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                <a href="/contacto.html" class="text-white bg-secondary hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-transform hover:scale-105 shadow-md">Contactar</a>
+                <a href="/contacto.html" class="text-white bg-secondary hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center shadow-md btn-nav btn-ripple">Contactar</a>
                 <button id="menu-btn" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false">
                     <span class="sr-only">Abrir menú</span>
                     <i data-lucide="menu" class="w-6 h-6"></i>
@@ -44,21 +55,35 @@
     <section class="relative bg-gradient-to-br from-[#0f1923] via-primary to-[#10171f] text-white pt-20 pb-32 lg:pb-48 overflow-hidden">
         <!-- Animated Background Elements -->
         <div class="absolute inset-0 overflow-hidden pointer-events-none">
-            <!-- Floating orbs -->
-            <div class="absolute -top-20 -right-20 w-[500px] h-[500px] rounded-full bg-secondary/10 blur-[100px] animate-[pulse_4s_ease-in-out_infinite]"></div>
-            <div class="absolute -bottom-32 -left-32 w-[400px] h-[400px] rounded-full bg-brandTurquoise/10 blur-[100px] animate-[pulse_6s_ease-in-out_infinite_1s]"></div>
-            <div class="absolute top-1/3 right-1/4 w-[200px] h-[200px] rounded-full bg-blue-500/5 blur-[80px] animate-[pulse_5s_ease-in-out_infinite_2s]"></div>
-            
+            <!-- Floating orbs with parallax -->
+            <div class="parallax-slow absolute -top-20 -right-20 w-[500px] h-[500px] rounded-full bg-secondary/10 blur-[100px] animate-[pulse_4s_ease-in-out_infinite]"></div>
+            <div class="parallax-slow absolute -bottom-32 -left-32 w-[400px] h-[400px] rounded-full bg-brandTurquoise/10 blur-[100px] animate-[pulse_6s_ease-in-out_infinite_1s]"></div>
+            <div class="parallax-fast absolute top-1/3 right-1/4 w-[200px] h-[200px] rounded-full bg-blue-500/5 blur-[80px] animate-[pulse_5s_ease-in-out_infinite_2s]"></div>
+
             <!-- Grid pattern overlay -->
             <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle, #fff 1px, transparent 1px); background-size: 40px 40px;"></div>
-            
+
+            <!-- Data stream columns (subtle code rain effect) -->
+            <div class="absolute top-0 left-[8%] w-6 h-full overflow-hidden opacity-100">
+                <div class="data-stream">SELECT *&#10;FROM datos&#10;WHERE ROI&#10;> 340%&#10;GROUP BY&#10;región&#10;ORDER BY&#10;revenue&#10;DESC&#10;LIMIT 10&#10;──────&#10;DAX =&#10;CALCULATE&#10;SUM(&#10;ventas)&#10;FILTER(&#10;ALL()&#10;)&#10;──────&#10;ETL&#10;LOAD&#10;TRANSFORM&#10;CLEAN&#10;MERGE&#10;DEPLOY&#10;SELECT *&#10;FROM datos&#10;WHERE ROI&#10;> 340%&#10;GROUP BY&#10;región&#10;ORDER BY&#10;revenue&#10;DESC&#10;LIMIT 10&#10;──────&#10;DAX =&#10;CALCULATE&#10;SUM(&#10;ventas)&#10;FILTER(&#10;ALL()&#10;)&#10;──────&#10;ETL&#10;LOAD&#10;TRANSFORM&#10;CLEAN&#10;MERGE&#10;DEPLOY</div>
+            </div>
+            <div class="absolute top-0 left-[25%] w-6 h-full overflow-hidden opacity-100 hidden lg:block">
+                <div class="data-stream data-stream-reverse" style="animation-delay: 3s;">JSON&#10;{api}&#10;status&#10;200 OK&#10;rows:&#10;15482&#10;time:&#10;0.3ms&#10;cache&#10;HIT&#10;──────&#10;Power&#10;BI&#10;refresh&#10;model&#10;sync&#10;deploy&#10;publish&#10;──────&#10;n8n&#10;webhook&#10;trigger&#10;execute&#10;success&#10;JSON&#10;{api}&#10;status&#10;200 OK&#10;rows:&#10;15482&#10;time:&#10;0.3ms&#10;cache&#10;HIT&#10;──────&#10;Power&#10;BI&#10;refresh&#10;model&#10;sync&#10;deploy&#10;publish&#10;──────&#10;n8n&#10;webhook&#10;trigger&#10;execute&#10;success</div>
+            </div>
+            <div class="absolute top-0 right-[12%] w-6 h-full overflow-hidden opacity-100 hidden md:block">
+                <div class="data-stream" style="animation-delay: 7s;">INSERT&#10;INTO&#10;dim_time&#10;VALUES&#10;(2026)&#10;──────&#10;MERGE&#10;UPDATE&#10;index&#10;REBUILD&#10;STATS&#10;──────&#10;KPI:&#10;+12%&#10;$1.2M&#10;94%&#10;+340%&#10;ROI&#10;──────&#10;INSERT&#10;INTO&#10;dim_time&#10;VALUES&#10;(2026)&#10;──────&#10;MERGE&#10;UPDATE&#10;index&#10;REBUILD&#10;STATS&#10;──────&#10;KPI:&#10;+12%&#10;$1.2M&#10;94%&#10;+340%&#10;ROI</div>
+            </div>
+
             <!-- Floating particles -->
-            <div class="absolute top-[15%] left-[10%] w-1 h-1 bg-secondary/60 rounded-full animate-[float_6s_ease-in-out_infinite]"></div>
+            <div class="parallax-fast absolute top-[15%] left-[10%] w-1 h-1 bg-secondary/60 rounded-full animate-[float_6s_ease-in-out_infinite]"></div>
             <div class="absolute top-[25%] right-[15%] w-1.5 h-1.5 bg-brandTurquoise/50 rounded-full animate-[float_8s_ease-in-out_infinite_1s]"></div>
-            <div class="absolute top-[60%] left-[20%] w-1 h-1 bg-blue-400/40 rounded-full animate-[float_7s_ease-in-out_infinite_2s]"></div>
+            <div class="parallax-fast absolute top-[60%] left-[20%] w-1 h-1 bg-blue-400/40 rounded-full animate-[float_7s_ease-in-out_infinite_2s]"></div>
             <div class="absolute top-[70%] right-[30%] w-2 h-2 bg-secondary/30 rounded-full animate-[float_9s_ease-in-out_infinite_3s]"></div>
             <div class="absolute top-[40%] left-[50%] w-1 h-1 bg-brandGreen/40 rounded-full animate-[float_5s_ease-in-out_infinite_0.5s]"></div>
-            <div class="absolute top-[80%] left-[70%] w-1.5 h-1.5 bg-white/20 rounded-full animate-[float_10s_ease-in-out_infinite_4s]"></div>
+            <div class="parallax-slow absolute top-[80%] left-[70%] w-1.5 h-1.5 bg-white/20 rounded-full animate-[float_10s_ease-in-out_infinite_4s]"></div>
+            <div class="absolute top-[10%] left-[45%] w-1 h-1 bg-secondary/40 rounded-full animate-[float_7s_ease-in-out_infinite_1.5s]"></div>
+            <div class="absolute top-[50%] right-[10%] w-1.5 h-1.5 bg-brandGreen/30 rounded-full animate-[float_8s_ease-in-out_infinite_2.5s]"></div>
+            <div class="absolute top-[85%] left-[35%] w-1 h-1 bg-blue-300/30 rounded-full animate-[float_6s_ease-in-out_infinite_4s]"></div>
         </div>
 
         <div class="relative max-w-7xl mx-auto px-6 md:px-8 lg:px-12 pt-12 text-center lg:text-left grid lg:grid-cols-2 gap-12 items-center">
@@ -75,13 +100,13 @@
                     Potenciamos el crecimiento de su negocio con estrategias de analítica avanzada, dashboards ejecutivos en Power BI y automatizaciones inteligentes que reducen costos y aceleran la toma de decisiones.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <a href="/contacto.html" class="group px-8 py-3.5 text-base font-semibold text-white bg-secondary hover:bg-orange-600 rounded-xl shadow-lg shadow-orange-500/20 hover:shadow-orange-500/40 transition-all hover:scale-105 flex items-center justify-center gap-2">
-                        Agendar una consulta <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                    <a href="/contacto.html" class="group px-8 py-3.5 text-base font-semibold text-white bg-secondary hover:bg-orange-600 rounded-xl shadow-lg shadow-orange-500/20 flex items-center justify-center gap-2 btn-cta-primary btn-ripple">
+                        Agendar una consulta <i data-lucide="arrow-right" class="w-5 h-5 btn-arrow-icon"></i>
                     </a>
-                    <a href="/servicios.html" class="px-8 py-3.5 text-base font-semibold text-white bg-white/5 hover:bg-white/15 border border-white/15 rounded-xl backdrop-blur-sm transition-all flex items-center justify-center hover:border-white/30">
+                    <a href="/servicios.html" class="px-8 py-3.5 text-base font-semibold text-white bg-white/5 hover:bg-white/15 border border-white/15 rounded-xl backdrop-blur-sm flex items-center justify-center btn-cta-secondary btn-ripple">
                         Conocer más
                     </a>
-                    <a href="/brochure/Analytics360 (1).pdf" target="_blank" class="group px-8 py-3.5 text-base font-semibold text-secondary bg-white/10 hover:bg-secondary hover:text-white border border-secondary/40 rounded-xl backdrop-blur-sm transition-all flex items-center justify-center gap-2 hover:scale-105">
+                    <a href="/brochure/Analytics360 (1).pdf" target="_blank" class="group px-8 py-3.5 text-base font-semibold text-secondary bg-white/10 hover:bg-secondary hover:text-white border border-secondary/40 rounded-xl backdrop-blur-sm flex items-center justify-center gap-2 btn-cta-secondary btn-ripple">
                         <i data-lucide="download" class="w-5 h-5"></i> Descargar Brochure
                     </a>
                 </div>
@@ -111,155 +136,209 @@
                 </div>
             </div>
 
-            <!-- Right: Animated Dashboard Mockup -->
+            <!-- Right: Data Intelligence Hub -->
             <div class="hidden lg:block relative reveal fade-right">
-                <div class="relative w-full max-w-lg mx-auto">
-                    <!-- Outer glow -->
-                    <div class="absolute -inset-4 bg-gradient-to-tr from-brandTurquoise/20 via-secondary/10 to-blue-500/20 rounded-3xl blur-2xl animate-[pulse_4s_ease-in-out_infinite]"></div>
-                    
-                    <!-- Main Dashboard Card -->
-                    <div class="relative bg-[#1a2332]/80 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
-                        <!-- Title bar -->
-                        <div class="flex justify-between items-center px-5 py-3 border-b border-white/5 bg-white/[0.02]">
-                            <div class="flex gap-1.5">
-                                <div class="w-2.5 h-2.5 rounded-full bg-red-400/80"></div>
-                                <div class="w-2.5 h-2.5 rounded-full bg-yellow-400/80"></div>
-                                <div class="w-2.5 h-2.5 rounded-full bg-green-400/80"></div>
-                            </div>
-                            <div class="text-[10px] text-gray-500 font-mono tracking-wider">analytics_dashboard.pbix</div>
-                            <div class="flex gap-2">
-                                <div class="w-4 h-4 rounded bg-white/5 flex items-center justify-center">
-                                    <i data-lucide="minimize-2" class="w-2.5 h-2.5 text-gray-500"></i>
-                                </div>
+                <div class="relative w-[480px] h-[480px] mx-auto">
+
+                    <!-- Background radial glow -->
+                    <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-secondary/10 via-brandTurquoise/8 to-blue-500/10 blur-3xl animate-[pulse_5s_ease-in-out_infinite]"></div>
+
+                    <!-- Scan line effect -->
+                    <div class="hub-scan-line rounded-full" style="animation-delay: 1s;"></div>
+
+                    <!-- SVG Connection Lines & Data Particles -->
+                    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 480 480" fill="none" xmlns="http://www.w3.org/2000/svg" style="z-index:1;">
+                        <defs>
+                            <linearGradient id="connGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#f39c11" stop-opacity="0"/>
+                                <stop offset="50%" stop-color="#f39c11" stop-opacity="0.6"/>
+                                <stop offset="100%" stop-color="#f39c11" stop-opacity="0"/>
+                            </linearGradient>
+                            <linearGradient id="connGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#00c38b" stop-opacity="0"/>
+                                <stop offset="50%" stop-color="#00c38b" stop-opacity="0.5"/>
+                                <stop offset="100%" stop-color="#00c38b" stop-opacity="0"/>
+                            </linearGradient>
+                            <linearGradient id="connGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#60a5fa" stop-opacity="0"/>
+                                <stop offset="50%" stop-color="#60a5fa" stop-opacity="0.5"/>
+                                <stop offset="100%" stop-color="#60a5fa" stop-opacity="0"/>
+                            </linearGradient>
+                            <!-- Particle paths -->
+                            <path id="particlePath1" d="M240,240 Q180,140 100,110"/>
+                            <path id="particlePath2" d="M240,240 Q320,160 380,100"/>
+                            <path id="particlePath3" d="M240,240 Q340,280 400,340"/>
+                            <path id="particlePath4" d="M240,240 Q160,320 90,370"/>
+                            <path id="particlePath5" d="M240,240 Q240,160 240,60"/>
+                            <path id="particlePath6" d="M240,240 Q240,330 240,420"/>
+                        </defs>
+                        <!-- Connection arcs -->
+                        <path d="M240,240 Q180,140 100,110" stroke="url(#connGrad1)" stroke-width="1" class="hub-connection"/>
+                        <path d="M240,240 Q320,160 380,100" stroke="url(#connGrad2)" stroke-width="1" class="hub-connection" style="animation-delay:0.3s"/>
+                        <path d="M240,240 Q340,280 400,340" stroke="url(#connGrad1)" stroke-width="1" class="hub-connection" style="animation-delay:0.6s"/>
+                        <path d="M240,240 Q160,320 90,370" stroke="url(#connGrad3)" stroke-width="1" class="hub-connection" style="animation-delay:0.9s"/>
+                        <path d="M240,240 Q240,160 240,60" stroke="url(#connGrad2)" stroke-width="1" class="hub-connection" style="animation-delay:1.2s"/>
+                        <path d="M240,240 Q240,330 240,420" stroke="url(#connGrad3)" stroke-width="1" class="hub-connection" style="animation-delay:1.5s"/>
+
+                        <!-- Flowing data particles -->
+                        <circle r="3" fill="#f39c11">
+                            <animateMotion dur="3s" repeatCount="indefinite" rotate="auto"><mpath href="#particlePath1"/></animateMotion>
+                            <animate attributeName="opacity" values="0;1;1;0" dur="3s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle r="2.5" fill="#00c38b">
+                            <animateMotion dur="3.5s" repeatCount="indefinite" rotate="auto" begin="0.5s"><mpath href="#particlePath2"/></animateMotion>
+                            <animate attributeName="opacity" values="0;1;1;0" dur="3.5s" repeatCount="indefinite" begin="0.5s"/>
+                        </circle>
+                        <circle r="3" fill="#f39c11">
+                            <animateMotion dur="4s" repeatCount="indefinite" rotate="auto" begin="1s"><mpath href="#particlePath3"/></animateMotion>
+                            <animate attributeName="opacity" values="0;1;1;0" dur="4s" repeatCount="indefinite" begin="1s"/>
+                        </circle>
+                        <circle r="2" fill="#60a5fa">
+                            <animateMotion dur="3.2s" repeatCount="indefinite" rotate="auto" begin="1.5s"><mpath href="#particlePath4"/></animateMotion>
+                            <animate attributeName="opacity" values="0;1;1;0" dur="3.2s" repeatCount="indefinite" begin="1.5s"/>
+                        </circle>
+                        <circle r="2.5" fill="#00c38b">
+                            <animateMotion dur="3.8s" repeatCount="indefinite" rotate="auto" begin="0.8s"><mpath href="#particlePath5"/></animateMotion>
+                            <animate attributeName="opacity" values="0;1;1;0" dur="3.8s" repeatCount="indefinite" begin="0.8s"/>
+                        </circle>
+                        <circle r="2" fill="#60a5fa">
+                            <animateMotion dur="4.2s" repeatCount="indefinite" rotate="auto" begin="2s"><mpath href="#particlePath6"/></animateMotion>
+                            <animate attributeName="opacity" values="0;1;1;0" dur="4.2s" repeatCount="indefinite" begin="2s"/>
+                        </circle>
+                        <!-- Extra small particles for density -->
+                        <circle r="1.5" fill="#f39c11" opacity="0.7">
+                            <animateMotion dur="2.5s" repeatCount="indefinite" rotate="auto" begin="0.3s"><mpath href="#particlePath2"/></animateMotion>
+                            <animate attributeName="opacity" values="0;0.7;0.7;0" dur="2.5s" repeatCount="indefinite" begin="0.3s"/>
+                        </circle>
+                        <circle r="1.5" fill="#00c38b" opacity="0.6">
+                            <animateMotion dur="2.8s" repeatCount="indefinite" rotate="auto" begin="1.2s"><mpath href="#particlePath4"/></animateMotion>
+                            <animate attributeName="opacity" values="0;0.6;0.6;0" dur="2.8s" repeatCount="indefinite" begin="1.2s"/>
+                        </circle>
+                    </svg>
+
+                    <!-- Orbit Ring 3 (outermost) -->
+                    <div class="orbit-ring orbit-ring-3">
+                        <!-- Node: ETL -->
+                        <div class="tech-node bg-blue-500/20" style="top:-24px; left:50%; margin-left:-24px;">
+                            <div class="flex flex-col items-center gap-0.5">
+                                <i data-lucide="database" class="w-4 h-4 text-blue-400"></i>
+                                <span class="text-blue-300">ETL</span>
                             </div>
                         </div>
-                        
-                        <!-- Dashboard content -->
-                        <div class="p-5 space-y-4">
-                            <!-- KPI Row -->
-                            <div class="grid grid-cols-3 gap-3">
-                                <div class="bg-white/5 rounded-xl p-3 border border-white/5">
-                                    <p class="text-[9px] text-gray-500 uppercase tracking-wider mb-1">Ingresos</p>
-                                    <p class="text-lg font-bold text-white hero-counter" data-target="847">0</p>
-                                    <div class="flex items-center gap-1 mt-1">
-                                        <i data-lucide="trending-up" class="w-3 h-3 text-brandGreen"></i>
-                                        <span class="text-[10px] text-brandGreen font-semibold">+12.5%</span>
-                                    </div>
-                                </div>
-                                <div class="bg-white/5 rounded-xl p-3 border border-white/5">
-                                    <p class="text-[9px] text-gray-500 uppercase tracking-wider mb-1">Usuarios</p>
-                                    <p class="text-lg font-bold text-white hero-counter" data-target="2341">0</p>
-                                    <div class="flex items-center gap-1 mt-1">
-                                        <i data-lucide="trending-up" class="w-3 h-3 text-brandGreen"></i>
-                                        <span class="text-[10px] text-brandGreen font-semibold">+8.2%</span>
-                                    </div>
-                                </div>
-                                <div class="bg-white/5 rounded-xl p-3 border border-white/5">
-                                    <p class="text-[9px] text-gray-500 uppercase tracking-wider mb-1">Conversión</p>
-                                    <p class="text-lg font-bold text-white">4.8<span class="text-sm text-gray-400">%</span></p>
-                                    <div class="flex items-center gap-1 mt-1">
-                                        <i data-lucide="trending-up" class="w-3 h-3 text-secondary"></i>
-                                        <span class="text-[10px] text-secondary font-semibold">+3.1%</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Animated Bar Chart -->
-                            <div class="bg-white/[0.03] rounded-xl p-4 border border-white/5">
-                                <div class="flex justify-between items-center mb-3">
-                                    <p class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider">Rendimiento Mensual</p>
-                                    <div class="flex gap-3">
-                                        <span class="flex items-center gap-1 text-[9px] text-gray-500"><span class="w-2 h-2 rounded-sm bg-secondary"></span>2025</span>
-                                        <span class="flex items-center gap-1 text-[9px] text-gray-500"><span class="w-2 h-2 rounded-sm bg-blue-400"></span>2026</span>
-                                    </div>
-                                </div>
-                                <div class="flex items-end gap-1.5 h-28">
-                                    <div class="flex-1 h-full flex items-end gap-0.5">
-                                        <div class="w-full bg-secondary/70 rounded-t-sm" style="height: 45%"></div>
-                                        <div class="w-full bg-blue-400/70 rounded-t-sm" style="height: 55%"></div>
-                                    </div>
-                                    <div class="flex-1 h-full flex items-end gap-0.5">
-                                        <div class="w-full bg-secondary/70 rounded-t-sm" style="height: 65%"></div>
-                                        <div class="w-full bg-blue-400/70 rounded-t-sm" style="height: 75%"></div>
-                                    </div>
-                                    <div class="flex-1 h-full flex items-end gap-0.5">
-                                        <div class="w-full bg-secondary/70 rounded-t-sm" style="height: 50%"></div>
-                                        <div class="w-full bg-blue-400/70 rounded-t-sm" style="height: 80%"></div>
-                                    </div>
-                                    <div class="flex-1 h-full flex items-end gap-0.5">
-                                        <div class="w-full bg-secondary/70 rounded-t-sm" style="height: 70%"></div>
-                                        <div class="w-full bg-blue-400/70 rounded-t-sm" style="height: 90%"></div>
-                                    </div>
-                                    <div class="flex-1 h-full flex items-end gap-0.5">
-                                        <div class="w-full bg-secondary/70 rounded-t-sm" style="height: 85%"></div>
-                                        <div class="w-full bg-blue-400/70 rounded-t-sm" style="height: 95%"></div>
-                                    </div>
-                                    <div class="flex-1 h-full flex items-end gap-0.5">
-                                        <div class="w-full bg-secondary/70 rounded-t-sm" style="height: 60%"></div>
-                                        <div class="w-full bg-blue-400/70 rounded-t-sm" style="height: 70%"></div>
-                                    </div>
-                                </div>
-                                <div class="flex justify-between mt-2 text-[8px] text-gray-600">
-                                    <span>Ene</span><span>Feb</span><span>Mar</span><span>Abr</span><span>May</span><span>Jun</span>
-                                </div>
-                            </div>
-                            
-                            <!-- Activity line -->
-                            <div class="bg-white/[0.03] rounded-xl p-3 border border-white/5">
-                                <div class="flex justify-between items-center">
-                                    <div class="flex items-center gap-2">
-                                        <div class="w-6 h-6 rounded-lg bg-brandTurquoise/20 flex items-center justify-center">
-                                            <i data-lucide="activity" class="w-3 h-3 text-brandTurquoise"></i>
-                                        </div>
-                                        <span class="text-[10px] text-gray-400">Pipeline activo</span>
-                                    </div>
-                                    <div class="flex items-center gap-1.5">
-                                        <span class="w-1.5 h-1.5 rounded-full bg-brandGreen animate-pulse"></span>
-                                        <span class="text-[10px] text-brandGreen font-semibold">En vivo</span>
-                                    </div>
-                                </div>
-                                <!-- Animated line -->
-                                <div class="mt-2 h-8 relative overflow-hidden rounded">
-                                    <svg class="w-full h-full" viewBox="0 0 300 30" preserveAspectRatio="none">
-                                        <path d="M0,15 Q25,5 50,12 T100,8 T150,18 T200,10 T250,14 T300,6" fill="none" stroke="url(#lineGrad)" stroke-width="2" stroke-linecap="round" class="hero-line"/>
-                                        <defs>
-                                            <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
-                                                <stop offset="0%" stop-color="#00bcd4" stop-opacity="0.3"/>
-                                                <stop offset="50%" stop-color="#00bcd4" stop-opacity="1"/>
-                                                <stop offset="100%" stop-color="#00bcd4" stop-opacity="0.3"/>
-                                            </linearGradient>
-                                        </defs>
-                                    </svg>
-                                </div>
+                        <!-- Node: Cloud -->
+                        <div class="tech-node bg-purple-500/20" style="bottom:-24px; left:50%; margin-left:-24px;">
+                            <div class="flex flex-col items-center gap-0.5">
+                                <i data-lucide="cloud" class="w-4 h-4 text-purple-400"></i>
+                                <span class="text-purple-300">Cloud</span>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Floating notification card -->
-                    <div class="absolute -left-12 top-16 bg-[#1a2332]/90 backdrop-blur-xl border border-white/10 rounded-xl p-3 shadow-xl animate-[floatCard_3s_ease-in-out_infinite] z-10">
+
+                    <!-- Orbit Ring 2 (middle) -->
+                    <div class="orbit-ring orbit-ring-2">
+                        <!-- Node: Power BI -->
+                        <div class="tech-node bg-yellow-500/20" style="top:-24px; left:50%; margin-left:-24px;">
+                            <div class="flex flex-col items-center gap-0.5">
+                                <i data-lucide="bar-chart-2" class="w-4 h-4 text-secondary"></i>
+                                <span class="text-yellow-300" style="font-size:7px;">Power BI</span>
+                            </div>
+                        </div>
+                        <!-- Node: APIs -->
+                        <div class="tech-node bg-green-500/20" style="top:50%; right:-24px; margin-top:-24px;">
+                            <div class="flex flex-col items-center gap-0.5">
+                                <i data-lucide="plug" class="w-4 h-4 text-brandGreen"></i>
+                                <span class="text-green-300">APIs</span>
+                            </div>
+                        </div>
+                        <!-- Node: n8n -->
+                        <div class="tech-node bg-orange-500/20" style="bottom:-24px; left:50%; margin-left:-24px;">
+                            <div class="flex flex-col items-center gap-0.5">
+                                <i data-lucide="workflow" class="w-4 h-4 text-orange-400"></i>
+                                <span class="text-orange-300">n8n</span>
+                            </div>
+                        </div>
+                        <!-- Node: SQL -->
+                        <div class="tech-node bg-cyan-500/20" style="top:50%; left:-24px; margin-top:-24px;">
+                            <div class="flex flex-col items-center gap-0.5">
+                                <i data-lucide="terminal" class="w-4 h-4 text-cyan-400"></i>
+                                <span class="text-cyan-300">SQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Orbit Ring 1 (innermost) -->
+                    <div class="orbit-ring orbit-ring-1">
+                        <!-- Node: DAX -->
+                        <div class="tech-node bg-secondary/20" style="top:-24px; left:50%; margin-left:-24px;">
+                            <div class="flex flex-col items-center gap-0.5">
+                                <i data-lucide="sigma" class="w-4 h-4 text-secondary"></i>
+                                <span class="text-yellow-200">DAX</span>
+                            </div>
+                        </div>
+                        <!-- Node: Modelo -->
+                        <div class="tech-node bg-brandTurquoise/20" style="bottom:-24px; left:50%; margin-left:-24px;">
+                            <div class="flex flex-col items-center gap-0.5">
+                                <i data-lucide="git-branch" class="w-4 h-4 text-brandTurquoise"></i>
+                                <span class="text-teal-300" style="font-size:7px;">Modelo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Central Hub -->
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+                        <!-- Outer glow ring -->
+                        <div class="absolute -inset-6 rounded-full bg-gradient-to-tr from-secondary/20 via-brandTurquoise/15 to-blue-400/20 blur-xl animate-[pulse_3s_ease-in-out_infinite]"></div>
+                        <!-- Hub circle -->
+                        <div class="hub-center-glow relative w-24 h-24 rounded-full bg-gradient-to-br from-[#1a2332] via-[#1e293b] to-[#0f1923] border-2 border-secondary/40 flex items-center justify-center" style="animation: hub-glow 3s ease-in-out infinite;">
+                            <div class="text-center">
+                                <span class="block text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-secondary to-yellow-300">360°</span>
+                                <span class="block text-[7px] font-bold text-gray-400 uppercase tracking-[0.2em]">Analytics</span>
+                            </div>
+                        </div>
+                        <!-- Ping effect -->
+                        <div class="absolute inset-0 rounded-full border border-secondary/30 animate-ping" style="animation-duration: 3s;"></div>
+                    </div>
+
+                    <!-- Floating Metric Cards -->
+                    <div class="hub-metric" style="top: 20px; right: -20px; animation-delay: 0s;">
                         <div class="flex items-center gap-2.5">
                             <div class="w-8 h-8 rounded-lg bg-brandGreen/20 flex items-center justify-center shrink-0">
-                                <i data-lucide="check-circle" class="w-4 h-4 text-brandGreen"></i>
+                                <i data-lucide="trending-up" class="w-4 h-4 text-brandGreen"></i>
                             </div>
                             <div>
-                                <p class="text-[10px] font-bold text-white">Reporte generado</p>
-                                <p class="text-[9px] text-gray-500">Hace 2 min</p>
+                                <p class="text-[10px] font-bold text-white">Revenue $1.2M</p>
+                                <p class="text-[9px] text-brandGreen font-semibold">+12% vs prev</p>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Floating metric card -->
-                    <div class="absolute -right-8 bottom-24 bg-[#1a2332]/90 backdrop-blur-xl border border-white/10 rounded-xl p-3 shadow-xl animate-[floatCard_4s_ease-in-out_infinite_1.5s] z-10">
+
+                    <div class="hub-metric" style="bottom: 30px; left: -30px; animation-delay: 2s;">
                         <div class="flex items-center gap-2.5">
                             <div class="w-8 h-8 rounded-lg bg-secondary/20 flex items-center justify-center shrink-0">
-                                <i data-lucide="bar-chart-2" class="w-4 h-4 text-secondary"></i>
+                                <i data-lucide="zap" class="w-4 h-4 text-secondary"></i>
                             </div>
                             <div>
-                                <p class="text-[10px] font-bold text-white">ROI +340%</p>
-                                <p class="text-[9px] text-gray-500">Este trimestre</p>
+                                <p class="text-[10px] font-bold text-white">Efficiency 94%</p>
+                                <p class="text-[9px] text-secondary font-semibold">+8% optimized</p>
                             </div>
                         </div>
                     </div>
+
+                    <div class="hub-metric" style="top: 55%; right: -40px; animation-delay: 1s;">
+                        <div class="flex items-center gap-2.5">
+                            <div class="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center shrink-0">
+                                <i data-lucide="activity" class="w-4 h-4 text-blue-400"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-bold text-white">Pipeline</p>
+                                <div class="flex items-center gap-1 mt-0.5">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-brandGreen animate-pulse"></span>
+                                    <span class="text-[9px] text-brandGreen font-semibold">En vivo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -269,24 +348,24 @@
     <section class="max-w-7xl mx-auto px-6 md:px-8 lg:px-12 -mt-16 lg:-mt-24 relative z-10 pb-20">
         <div class="grid md:grid-cols-3 gap-6">
             <!-- Card 1 -->
-            <div class="bg-white rounded-xl shadow-xl p-8 border border-gray-100 reveal hover:-translate-y-2 transition-transform duration-300">
-                <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-6">
+            <div class="bg-white rounded-xl shadow-xl p-8 border border-gray-100 reveal tilt-card card-glow">
+                <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-6 icon-hover-rotate">
                     <i data-lucide="timer" class="w-7 h-7"></i>
                 </div>
-                <h3 class="text-xl font-bold mb-3">90% menos tiempo</h3>
+                <h3 class="text-xl font-bold mb-3"><span class="counter-glow" data-count-target="90" data-count-suffix="%">0%</span> menos tiempo</h3>
                 <p class="text-gray-600">Reducción drástica en el tiempo de procesamiento de datos gracias a nuestras soluciones de automatización avanzadas.</p>
             </div>
             <!-- Card 2 -->
-            <div class="bg-white rounded-xl shadow-xl p-8 border border-gray-100 reveal hover:-translate-y-2 transition-transform duration-300" style="transition-delay: 100ms;">
-                <div class="w-14 h-14 bg-orange-50 text-secondary rounded-lg flex items-center justify-center mb-6">
+            <div class="bg-white rounded-xl shadow-xl p-8 border border-gray-100 reveal tilt-card card-glow" style="transition-delay: 100ms;">
+                <div class="w-14 h-14 bg-orange-50 text-secondary rounded-lg flex items-center justify-center mb-6 icon-hover-rotate">
                     <i data-lucide="users" class="w-7 h-7"></i>
                 </div>
                 <h3 class="text-xl font-bold mb-3">Equipo Integral</h3>
                 <p class="text-gray-600">Especialistas certificados en Power BI, análisis de datos e integración de sistemas a su disposición.</p>
             </div>
             <!-- Card 3 -->
-            <div class="bg-white rounded-xl shadow-xl p-8 border border-gray-100 reveal hover:-translate-y-2 transition-transform duration-300" style="transition-delay: 200ms;">
-                <div class="w-14 h-14 bg-green-50 text-brandGreen rounded-lg flex items-center justify-center mb-6">
+            <div class="bg-white rounded-xl shadow-xl p-8 border border-gray-100 reveal tilt-card card-glow" style="transition-delay: 200ms;">
+                <div class="w-14 h-14 bg-green-50 text-brandGreen rounded-lg flex items-center justify-center mb-6 icon-hover-rotate">
                     <i data-lucide="trending-down" class="w-7 h-7"></i>
                 </div>
                 <h3 class="text-xl font-bold mb-3">Reducción de Costos</h3>
@@ -300,24 +379,23 @@
         <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
             <div class="text-center max-w-3xl mx-auto mb-16 reveal">
                 <h2 class="text-secondary font-semibold tracking-wide uppercase text-sm mb-2">Nuestros Servicios</h2>
-                <h3 class="text-3xl md:text-4xl font-bold">Soluciones Integrales en Datos</h3>
-                <div class="w-20 h-1 bg-secondary mx-auto mt-6 rounded-full"></div>
+                <h3 class="text-3xl md:text-4xl font-bold animated-underline">Soluciones Integrales en Datos</h3>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Service 1 -->
-                <a href="/servicios.html" class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 hover:-translate-y-1 reveal">
-                    <div class="w-12 h-12 bg-primary/5 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                <a href="/servicios.html" class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 reveal service-card hover-lift">
+                    <div class="w-12 h-12 bg-primary/5 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300 icon-hover-rotate">
                         <i data-lucide="bar-chart-2" class="w-6 h-6"></i>
                     </div>
                     <h4 class="text-xl font-bold mb-3">Dashboards en Power BI</h4>
                     <p class="text-gray-600 mb-4 text-sm leading-relaxed">Desarrollo de cuadros de mando interactivos centrados en los KPIs críticos de su negocio.</p>
                     <span class="text-secondary font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">Ver más <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
                 </a>
-                
+
                 <!-- Service 2 -->
-                <a href="/servicios.html" class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 hover:-translate-y-1 reveal" style="transition-delay: 50ms;">
-                    <div class="w-12 h-12 bg-primary/5 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                <a href="/servicios.html" class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 reveal service-card hover-lift" style="transition-delay: 50ms;">
+                    <div class="w-12 h-12 bg-primary/5 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300 icon-hover-rotate">
                         <i data-lucide="database" class="w-6 h-6"></i>
                     </div>
                     <h4 class="text-xl font-bold mb-3">Modelado de Datos</h4>
@@ -326,8 +404,8 @@
                 </a>
 
                 <!-- Service 3 -->
-                <a href="/servicios.html" class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 hover:-translate-y-1 reveal" style="transition-delay: 100ms;">
-                    <div class="w-12 h-12 bg-primary/5 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                <a href="/servicios.html" class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 reveal service-card hover-lift" style="transition-delay: 100ms;">
+                    <div class="w-12 h-12 bg-primary/5 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300 icon-hover-rotate">
                         <i data-lucide="zap" class="w-6 h-6"></i>
                     </div>
                     <h4 class="text-xl font-bold mb-3">DAX Avanzado</h4>
@@ -336,8 +414,8 @@
                 </a>
 
                 <!-- Service 4 -->
-                <a href="/servicios.html" class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 hover:-translate-y-1 reveal">
-                    <div class="w-12 h-12 bg-primary/5 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                <a href="/servicios.html" class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 reveal service-card hover-lift">
+                    <div class="w-12 h-12 bg-primary/5 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300 icon-hover-rotate">
                         <i data-lucide="plug" class="w-6 h-6"></i>
                     </div>
                     <h4 class="text-xl font-bold mb-3">Integración de APIs</h4>
@@ -346,8 +424,8 @@
                 </a>
 
                 <!-- Service 5 -->
-                <a href="/servicios.html" class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 hover:-translate-y-1 reveal" style="transition-delay: 50ms;">
-                    <div class="w-12 h-12 bg-primary/5 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                <a href="/servicios.html" class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 reveal service-card hover-lift" style="transition-delay: 50ms;">
+                    <div class="w-12 h-12 bg-primary/5 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300 icon-hover-rotate">
                         <i data-lucide="shield-check" class="w-6 h-6"></i>
                     </div>
                     <h4 class="text-xl font-bold mb-3">Gobierno y Performance</h4>
@@ -356,8 +434,8 @@
                 </a>
 
                 <!-- Service 6 -->
-                <a href="/servicios.html" class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 hover:-translate-y-1 reveal" style="transition-delay: 100ms;">
-                    <div class="w-12 h-12 bg-primary/5 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                <a href="/servicios.html" class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 reveal service-card hover-lift" style="transition-delay: 100ms;">
+                    <div class="w-12 h-12 bg-primary/5 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300 icon-hover-rotate">
                         <i data-lucide="briefcase" class="w-6 h-6"></i>
                     </div>
                     <h4 class="text-xl font-bold mb-3">Consultoría BI</h4>
@@ -374,17 +452,17 @@
             <div class="flex flex-col md:flex-row justify-between items-end mb-16 reveal">
                 <div class="max-w-2xl">
                     <h2 class="text-secondary font-semibold tracking-wide uppercase text-sm mb-2">Lo que Dicen Nuestros Clientes</h2>
-                    <h3 class="text-3xl md:text-4xl font-bold">Transformaciones comprobadas en empresas reales</h3>
+                    <h3 class="text-3xl md:text-4xl font-bold animated-underline">Transformaciones comprobadas en empresas reales</h3>
                 </div>
                 <a href="/nosotros.html" class="hidden md:flex items-center gap-2 text-primary font-semibold hover:text-secondary transition-colors">
                     Ver todos los testimonios <i data-lucide="arrow-right" class="w-5 h-5"></i>
                 </a>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Testimonial 1: Walter Hurtado / Innovacel -->
-                <div class="bg-gray-50 rounded-2xl p-8 lg:p-10 border-t-4 border-secondary shadow-sm hover:shadow-md transition-shadow relative reveal">
-                    <i data-lucide="quote" class="absolute top-8 right-8 w-12 h-12 text-gray-200"></i>
+            <div class="grid md:grid-cols-2 gap-8" data-testimonials>
+                <!-- Testimonial 1: Walter Hurtado / INNAVALOZ -->
+                <div class="bg-gray-50 rounded-2xl p-8 lg:p-10 border-t-4 border-secondary shadow-sm hover:shadow-md transition-shadow relative hover-lift">
+                    <i data-lucide="quote" class="absolute top-8 right-8 w-12 h-12 text-gray-200 quote-animated"></i>
                     <p class="text-gray-700 italic mb-8 relative z-10 text-lg leading-relaxed">
                         "Los dashboards de rotación de inventario y ventas han transformado completamente nuestra operación. Ahora podemos tomar decisiones de compra basadas en datos reales, optimizar nuestros márgenes, y tener control total de las 3 tiendas y el mayoreo desde un solo lugar. La inversión se pagó sola en los primeros meses."
                     </p>
@@ -394,14 +472,14 @@
                         </div>
                         <div>
                             <h5 class="font-bold text-lg text-primary">Walter Hurtado</h5>
-                            <p class="text-sm text-gray-500">Director General, Innovacel & Centrosel</p>
+                            <p class="text-sm text-gray-500">Gerente General, Corporación INNAVALOZ S.A</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Testimonial 2: Equipo Vozmia -->
-                <div class="bg-gray-50 rounded-2xl p-8 lg:p-10 border-t-4 border-secondary shadow-sm hover:shadow-md transition-shadow relative reveal" style="transition-delay: 100ms;">
-                    <i data-lucide="quote" class="absolute top-8 right-8 w-12 h-12 text-gray-200"></i>
+                <div class="bg-gray-50 rounded-2xl p-8 lg:p-10 border-t-4 border-secondary shadow-sm hover:shadow-md transition-shadow relative hover-lift" style="transition-delay: 100ms;">
+                    <i data-lucide="quote" class="absolute top-8 right-8 w-12 h-12 text-gray-200 quote-animated" style="animation-delay: 1s;"></i>
                     <p class="text-gray-700 italic mb-8 relative z-10 text-lg leading-relaxed">
                         "Antes nuestro cliente tenía que descargar Excel manualmente y tardaba horas generando reportes. Con el dashboard automatizado que Analytics360 desarrolló, ahora tienen información en tiempo real y el proceso que tomaba medio día ahora toma segundos. Reducción del 90% en tiempo de reporteo."
                     </p>
@@ -417,8 +495,8 @@
                 </div>
 
                 <!-- Testimonial 3: Equipo Smart Apps -->
-                <div class="bg-gray-50 rounded-2xl p-8 lg:p-10 border-t-4 border-secondary shadow-sm hover:shadow-md transition-shadow relative reveal">
-                    <i data-lucide="quote" class="absolute top-8 right-8 w-12 h-12 text-gray-200"></i>
+                <div class="bg-gray-50 rounded-2xl p-8 lg:p-10 border-t-4 border-secondary shadow-sm hover:shadow-md transition-shadow relative hover-lift">
+                    <i data-lucide="quote" class="absolute top-8 right-8 w-12 h-12 text-gray-200 quote-animated" style="animation-delay: 2s;"></i>
                     <p class="text-gray-700 italic mb-8 relative z-10 text-lg leading-relaxed">
                         "El dashboard que nos desarrollaron es nuestra herramienta estrella para presentar a clientes. Convertimos datos complejos de sensores e IA en visualizaciones que cualquier gerente de retail puede entender. Nos ha diferenciado completamente en el mercado y nuestros clientes quedan impresionados."
                     </p>
@@ -434,8 +512,8 @@
                 </div>
 
                 <!-- Testimonial 4: Carlos Méndez / Grupo Financiero -->
-                <div class="bg-gray-50 rounded-2xl p-8 lg:p-10 border-t-4 border-secondary shadow-sm hover:shadow-md transition-shadow relative reveal" style="transition-delay: 100ms;">
-                    <i data-lucide="quote" class="absolute top-8 right-8 w-12 h-12 text-gray-200"></i>
+                <div class="bg-gray-50 rounded-2xl p-8 lg:p-10 border-t-4 border-secondary shadow-sm hover:shadow-md transition-shadow relative hover-lift" style="transition-delay: 100ms;">
+                    <i data-lucide="quote" class="absolute top-8 right-8 w-12 h-12 text-gray-200 quote-animated" style="animation-delay: 3s;"></i>
                     <p class="text-gray-700 italic mb-8 relative z-10 text-lg leading-relaxed">
                         "La automatización nos ahorró 40 horas mensuales. Los reportes que tardaban 2 semanas ahora toman 30 minutos. Inversión recuperada: $85,000 en el primer año. El equipo de Analytics360 entendió perfectamente nuestras necesidades regulatorias."
                     </p>
@@ -460,21 +538,38 @@
     </section>
 
     <!-- Trusted By / Logos Section -->
-    <section class="py-16 bg-white border-t border-gray-100">
+    <section class="py-16 bg-white border-t border-gray-100 overflow-hidden">
         <div class="max-w-5xl mx-auto px-6 text-center reveal">
             <h3 class="text-sm font-bold text-gray-400 tracking-widest uppercase mb-12">Empresas que confían en nosotros</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-                <a href="https://smartapps.gt/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-4 rounded-xl hover:bg-gray-50 transition-all duration-300 group">
-                    <img src="/logos/smartapps.png" alt="Smartapps" class="max-h-20 lg:max-h-24 w-auto object-contain opacity-50 group-hover:opacity-100 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300">
+        </div>
+        <!-- Infinite marquee -->
+        <div class="relative overflow-hidden" style="mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);">
+            <div class="marquee-track">
+                <!-- First set -->
+                <a href="https://smartapps.gt/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center px-10 shrink-0 group">
+                    <img src="/logos/smartapps.png" alt="Smartapps" class="max-h-20 lg:max-h-24 w-auto object-contain opacity-40 group-hover:opacity-100 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300">
                 </a>
-                <a href="https://vozmia.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-4 rounded-xl hover:bg-gray-50 transition-all duration-300 group">
-                    <img src="/logos/Vozmia.png" alt="VOZMIA" class="max-h-20 lg:max-h-24 w-auto object-contain opacity-50 group-hover:opacity-100 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300">
+                <a href="https://vozmia.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center px-10 shrink-0 group">
+                    <img src="/logos/Vozmia.png" alt="VOZMIA" class="max-h-20 lg:max-h-24 w-auto object-contain opacity-40 group-hover:opacity-100 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300">
                 </a>
-                <div class="flex items-center justify-center p-4 rounded-xl hover:bg-gray-50 transition-all duration-300 group">
-                    <img src="/logos/Innovacel (1).png" alt="Innovacel" class="max-h-20 lg:max-h-24 w-auto object-contain opacity-50 group-hover:opacity-100 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300">
+                <div class="flex items-center justify-center px-10 shrink-0 group">
+                    <img src="/logos/Innovacel (1).png" alt="Innovacel" class="max-h-20 lg:max-h-24 w-auto object-contain opacity-40 group-hover:opacity-100 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300">
                 </div>
-                <div class="flex items-center justify-center p-4 rounded-xl hover:bg-gray-50 transition-all duration-300 group">
-                    <img src="/logos/centrocel (1).png" alt="Centrocel" class="max-h-20 lg:max-h-24 w-auto object-contain opacity-50 group-hover:opacity-100 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300">
+                <div class="flex items-center justify-center px-10 shrink-0 group">
+                    <img src="/logos/centrocel (1).png" alt="Centrocel" class="max-h-20 lg:max-h-24 w-auto object-contain opacity-40 group-hover:opacity-100 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300">
+                </div>
+                <!-- Duplicate set for seamless loop -->
+                <a href="https://smartapps.gt/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center px-10 shrink-0 group" aria-hidden="true">
+                    <img src="/logos/smartapps.png" alt="" class="max-h-20 lg:max-h-24 w-auto object-contain opacity-40 group-hover:opacity-100 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300">
+                </a>
+                <a href="https://vozmia.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center px-10 shrink-0 group" aria-hidden="true">
+                    <img src="/logos/Vozmia.png" alt="" class="max-h-20 lg:max-h-24 w-auto object-contain opacity-40 group-hover:opacity-100 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300">
+                </a>
+                <div class="flex items-center justify-center px-10 shrink-0 group" aria-hidden="true">
+                    <img src="/logos/Innovacel (1).png" alt="" class="max-h-20 lg:max-h-24 w-auto object-contain opacity-40 group-hover:opacity-100 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300">
+                </div>
+                <div class="flex items-center justify-center px-10 shrink-0 group" aria-hidden="true">
+                    <img src="/logos/centrocel (1).png" alt="" class="max-h-20 lg:max-h-24 w-auto object-contain opacity-40 group-hover:opacity-100 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300">
                 </div>
             </div>
         </div>
@@ -489,21 +584,21 @@
         <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
             <div class="reveal">
                 <h2 class="text-secondary font-semibold tracking-wide uppercase text-sm mb-4">Transforme sus Datos en Decisiones</h2>
-                <h3 class="text-3xl md:text-5xl font-bold text-white mb-12">3 Pasos Simples para Empezar Hoy</h3>
+                <h3 class="text-3xl md:text-5xl font-bold text-white mb-12 animated-underline">3 Pasos Simples para Empezar Hoy</h3>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8 mb-12 reveal">
+            <div class="grid md:grid-cols-3 gap-8 mb-12 reveal" data-steps>
                 <!-- Paso 1 -->
-                <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-8 hover:bg-white/15 transition-all">
-                    <div class="w-14 h-14 bg-secondary rounded-xl flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl shadow-lg">1</div>
+                <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-8 hover:bg-white/15 transition-all step-connector">
+                    <div class="step-number w-14 h-14 bg-secondary rounded-xl flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl shadow-lg">1</div>
                     <h4 class="text-xl font-bold text-white mb-3">Agende su Llamada Gratuita</h4>
                     <p class="text-sm text-gray-300 font-medium mb-1">30 minutos</p>
                     <p class="text-gray-400 text-sm">Charlemos sobre sus desafíos específicos. Sin compromiso, sin presión.</p>
                 </div>
 
                 <!-- Paso 2 -->
-                <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-8 hover:bg-white/15 transition-all">
-                    <div class="w-14 h-14 bg-secondary rounded-xl flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl shadow-lg">2</div>
+                <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-8 hover:bg-white/15 transition-all step-connector">
+                    <div class="step-number w-14 h-14 bg-secondary rounded-xl flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl shadow-lg" style="animation-delay: 0.8s;">2</div>
                     <h4 class="text-xl font-bold text-white mb-3">Reciba Propuesta</h4>
                     <p class="text-sm text-gray-300 font-medium mb-1">48 horas</p>
                     <p class="text-gray-400 text-sm">Timeline, alcance, ROI estimado y precio fijo. Todo claro antes de empezar.</p>
@@ -511,7 +606,7 @@
 
                 <!-- Paso 3 -->
                 <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-8 hover:bg-white/15 transition-all">
-                    <div class="w-14 h-14 bg-secondary rounded-xl flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl shadow-lg">3</div>
+                    <div class="step-number w-14 h-14 bg-secondary rounded-xl flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl shadow-lg" style="animation-delay: 1.6s;">3</div>
                     <h4 class="text-xl font-bold text-white mb-3">Vea Resultados</h4>
                     <p class="text-sm text-gray-300 font-medium mb-1">2 semanas</p>
                     <p class="text-gray-400 text-sm">Primera versión funcional en su segunda semana. Vea valor inmediato.</p>
@@ -519,11 +614,11 @@
             </div>
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center reveal">
-                <a href="/contacto.html" class="inline-flex items-center gap-2 px-8 py-4 text-lg font-bold text-primary bg-white rounded-lg shadow-xl hover:bg-gray-100 hover:scale-105 hover:shadow-white/20 transition-all">
+                <a href="/contacto.html" class="inline-flex items-center gap-2 px-8 py-4 text-lg font-bold text-primary bg-white rounded-lg shadow-xl hover:bg-gray-100 btn-cta-primary btn-ripple" style="--tw-shadow-color: rgba(255,255,255,0.2);">
                     Agendar una asesoría gratuita
-                    <i data-lucide="calendar" class="w-5 h-5"></i>
+                    <i data-lucide="calendar" class="w-5 h-5 btn-arrow-icon"></i>
                 </a>
-                <a href="/brochure/Analytics360 (1).pdf" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 text-lg font-bold text-white bg-white/10 border-2 border-white/30 rounded-lg hover:bg-white/20 hover:scale-105 transition-all">
+                <a href="/brochure/Analytics360 (1).pdf" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 text-lg font-bold text-white bg-white/10 border-2 border-white/30 rounded-lg hover:bg-white/20 btn-cta-secondary btn-ripple">
                     <i data-lucide="download" class="w-5 h-5"></i> Ver Brochure
                 </a>
             </div>
@@ -599,6 +694,12 @@
             </div>
         </div>
     </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/50257656833?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20sus%20servicios" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full shadow-lg hover:shadow-xl flex items-center justify-center transition-all hover:scale-110 group animate-whatsapp-pulse whatsapp-animated" aria-label="Contactar por WhatsApp">
+        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span class="absolute right-full mr-3 bg-white text-gray-800 text-sm font-semibold px-4 py-2 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">¿Necesita ayuda? Escríbanos</span>
+    </a>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/lucide@latest"></script>
