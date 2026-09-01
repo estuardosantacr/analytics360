@@ -1,8 +1,9 @@
 import { animate, inView, stagger } from "motion"
+import { createIcons, icons } from "lucide"
 
 document.addEventListener('DOMContentLoaded', () => {
-    // ── Lucide Icons ──
-    if (typeof lucide !== 'undefined') lucide.createIcons();
+    // ── Lucide Icons (bundled localmente, no CDN) ──
+    createIcons({ icons });
 
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -213,13 +214,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { passive: true });
     }
 
-    // ── Active nav link highlight ──
-    const currentPath = window.location.pathname;
-    document.querySelectorAll('nav a[href]').forEach(link => {
-        const href = link.getAttribute('href');
-        if (href === currentPath || (currentPath === '/' && href === '/') ||
-            (currentPath.endsWith(href) && href !== '/')) {
-            link.classList.add('text-secondary', 'font-semibold');
-        }
-    });
 });

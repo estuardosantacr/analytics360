@@ -31,3 +31,4 @@ Thumbs.db
 
 # Claude local settings (mantener launch.json compartido)
 .claude/settings.local.json
+.claude/skills/
