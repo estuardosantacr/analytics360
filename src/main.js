@@ -1,9 +1,44 @@
 import { animate, inView, stagger } from "motion"
-import { createIcons, icons } from "lucide"
+import {
+    createIcons,
+    Activity, AlertTriangle, ArrowRight, ArrowRightLeft, Award,
+    BadgeCheck, BarChart2, BellRing, Bot, Brain, Briefcase,
+    Calendar, CalendarClock, Check, CheckCircle, ChevronDown,
+    ClipboardCheck, Cloud, CloudUpload, Code2, Cog,
+    Database, Download, ExternalLink, Eye, EyeOff,
+    FileBarChart, FileSpreadsheet, Filter, Gauge, GitBranch,
+    GraduationCap, Headphones, KeyRound, Landmark, Layers, LockKeyhole,
+    Mail, MapPin, Menu, MessageCircle, Monitor,
+    Phone, PhoneCall, PieChart, Plug, Puzzle,
+    Quote, Radar, RadioTower, RefreshCw, Repeat2, Rocket,
+    ScanEye, SearchX, Send, Settings2, Shield, ShieldCheck,
+    Sigma, Siren, Smartphone, Target, Terminal, Timer,
+    TrendingDown, TrendingUp, Trophy,
+    User, UserCheck, UserCog, Users,
+    Workflow, Wrench, X, Zap
+} from "lucide"
 
 document.addEventListener('DOMContentLoaded', () => {
-    // ── Lucide Icons (bundled localmente, no CDN) ──
-    createIcons({ icons });
+    // ── Lucide Icons (tree-shake: solo los 75 iconos que usamos, no los 1500) ──
+    createIcons({
+        icons: {
+            Activity, AlertTriangle, ArrowRight, ArrowRightLeft, Award,
+            BadgeCheck, BarChart2, BellRing, Bot, Brain, Briefcase,
+            Calendar, CalendarClock, Check, CheckCircle, ChevronDown,
+            ClipboardCheck, Cloud, CloudUpload, Code2, Cog,
+            Database, Download, ExternalLink, Eye, EyeOff,
+            FileBarChart, FileSpreadsheet, Filter, Gauge, GitBranch,
+            GraduationCap, Headphones, KeyRound, Landmark, Layers, LockKeyhole,
+            Mail, MapPin, Menu, MessageCircle, Monitor,
+            Phone, PhoneCall, PieChart, Plug, Puzzle,
+            Quote, Radar, RadioTower, RefreshCw, Repeat2, Rocket,
+            ScanEye, SearchX, Send, Settings2, Shield, ShieldCheck,
+            Sigma, Siren, Smartphone, Target, Terminal, Timer,
+            TrendingDown, TrendingUp, Trophy,
+            User, UserCheck, UserCog, Users,
+            Workflow, Wrench, X, Zap
+        }
+    });
 
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -162,56 +197,46 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ── Parallax effect on hero background elements ──
-    if (!prefersReducedMotion) {
-        const parallaxSlow = document.querySelectorAll('.parallax-slow');
-        const parallaxFast = document.querySelectorAll('.parallax-fast');
-
-        if (parallaxSlow.length || parallaxFast.length) {
-            let ticking = false;
-            window.addEventListener('scroll', () => {
-                if (!ticking) {
-                    requestAnimationFrame(() => {
-                        const y = window.scrollY;
-                        parallaxSlow.forEach(el => {
-                            el.style.transform = `translateY(${y * 0.15}px)`;
-                        });
-                        parallaxFast.forEach(el => {
-                            el.style.transform = `translateY(${y * 0.3}px)`;
-                        });
-                        ticking = false;
-                    });
-                    ticking = true;
-                }
-            }, { passive: true });
-        }
-    }
-
-    // ── Navbar: Hide on scroll down, show on scroll up ──
+    // ── Scroll único: parallax + navbar + botón flotante de WhatsApp ──
+    const parallaxSlow = document.querySelectorAll('.parallax-slow');
+    const parallaxFast = document.querySelectorAll('.parallax-fast');
     const navbar = document.querySelector('nav');
-    if (navbar && !prefersReducedMotion) {
-        let lastY = 0;
-        let ticking = false;
-        let isHidden = false;
+    const whatsapp = document.querySelector('.whatsapp-animated');
 
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                requestAnimationFrame(() => {
-                    const y = window.scrollY;
+    let lastY = 0;
+    let ticking = false;
+    let navHidden = false;
 
-                    if (y > 300 && y > lastY + 5 && !isHidden) {
-                        animate(navbar, { transform: 'translateY(-100%)' }, { duration: 0.3, easing: 'ease-in' });
-                        isHidden = true;
-                    } else if ((y < lastY - 5 || y <= 100) && isHidden) {
-                        animate(navbar, { transform: 'translateY(0)' }, { duration: 0.25, easing: 'ease-out' });
-                        isHidden = false;
-                    }
+    const onScroll = () => {
+        const y = window.scrollY;
 
-                    lastY = y;
-                    ticking = false;
-                });
-                ticking = true;
+        if (!prefersReducedMotion) {
+            parallaxSlow.forEach(el => { el.style.transform = `translateY(${y * 0.15}px)`; });
+            parallaxFast.forEach(el => { el.style.transform = `translateY(${y * 0.3}px)`; });
+
+            if (navbar) {
+                if (y > 300 && y > lastY + 5 && !navHidden) {
+                    animate(navbar, { transform: 'translateY(-100%)' }, { duration: 0.3, easing: 'ease-in' });
+                    navHidden = true;
+                } else if ((y < lastY - 5 || y <= 100) && navHidden) {
+                    animate(navbar, { transform: 'translateY(0)' }, { duration: 0.25, easing: 'ease-out' });
+                    navHidden = false;
+                }
             }
-        }, { passive: true });
-    }
+        }
 
+        if (whatsapp) whatsapp.classList.toggle('is-visible', y > 400);
+
+        lastY = y;
+        ticking = false;
+    };
+
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            requestAnimationFrame(onScroll);
+            ticking = true;
+        }
+    }, { passive: true });
+
+    onScroll();
 });
