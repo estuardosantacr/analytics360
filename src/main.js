@@ -197,6 +197,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ── Parallax effect on hero background elements ──
+    // ── Testimonios: en móvil los 2 últimos se despliegan a pedido ──
+    const verMasBtn = document.getElementById('ver-mas-testimonios');
+    if (verMasBtn) {
+        verMasBtn.addEventListener('click', () => {
+            const extras = document.querySelectorAll('.testimonial-extra');
+            extras.forEach(el => el.classList.remove('hidden'));
+            verMasBtn.setAttribute('aria-expanded', 'true');
+            verMasBtn.remove();
+
+            if (!prefersReducedMotion) {
+                animate(
+                    extras,
+                    { opacity: [0, 1], transform: ['translateY(20px)', 'translateY(0)'] },
+                    { delay: stagger(0.1), duration: 0.5, easing: [0.22, 1, 0.36, 1] }
+                );
+            }
+        });
+    }
+
     // ── Scroll único: parallax + navbar + botón flotante de WhatsApp ──
     const parallaxSlow = document.querySelectorAll('.parallax-slow');
     const parallaxFast = document.querySelectorAll('.parallax-fast');
