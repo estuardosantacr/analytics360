@@ -197,6 +197,70 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ── Parallax effect on hero background elements ──
+    // ── Calculadora: costo anual del reporteo manual ──
+    const roiForm = document.getElementById('roi-form');
+    if (roiForm) {
+        // 90 %: la reducción de tiempo de reporteo lograda con Vozmia.
+        const FACTOR_AHORRO = 0.9;
+        const MESES = 12;
+
+        const campos = {
+            personas: document.getElementById('roi-personas'),
+            horas: document.getElementById('roi-horas'),
+            costo: document.getElementById('roi-costo')
+        };
+        const salidas = {
+            personas: document.getElementById('roi-personas-val'),
+            horas: document.getElementById('roi-horas-val'),
+            costo: document.getElementById('roi-costo-val'),
+            costoAnual: document.getElementById('roi-costo-anual'),
+            horasAnual: document.getElementById('roi-horas-anual'),
+            ahorro: document.getElementById('roi-ahorro'),
+            horasLibres: document.getElementById('roi-horas-libres')
+        };
+
+        const quetzales = new Intl.NumberFormat('es-GT', {
+            style: 'currency', currency: 'GTQ',
+            minimumFractionDigits: 0, maximumFractionDigits: 0
+        });
+        const numero = new Intl.NumberFormat('es-GT', { maximumFractionDigits: 0 });
+
+        // Pinta la porción rellena del track (Chrome/Safari no lo hacen solos)
+        const pintarTrack = (input) => {
+            const pct = ((input.value - input.min) / (input.max - input.min)) * 100;
+            input.style.setProperty('--roi-fill', `${pct}%`);
+        };
+
+        const recalcular = () => {
+            const personas = Number(campos.personas.value);
+            const horasMes = Number(campos.horas.value);
+            const costoHora = Number(campos.costo.value);
+
+            const horasAnuales = personas * horasMes * MESES;
+            const costoAnual = horasAnuales * costoHora;
+            const horasRecuperables = Math.round(horasAnuales * FACTOR_AHORRO);
+            const ahorroAnual = Math.round(costoAnual * FACTOR_AHORRO);
+
+            salidas.personas.textContent = personas;
+            salidas.horas.textContent = horasMes;
+            salidas.costo.textContent = quetzales.format(costoHora);
+
+            salidas.costoAnual.textContent = quetzales.format(costoAnual);
+            salidas.horasAnual.textContent = `${numero.format(horasAnuales)} horas de su equipo`;
+            salidas.ahorro.textContent = quetzales.format(ahorroAnual);
+            salidas.horasLibres.textContent = `${numero.format(horasRecuperables)} horas para trabajo que sí decide`;
+        };
+
+        Object.values(campos).forEach(input => {
+            pintarTrack(input);
+            input.addEventListener('input', () => {
+                pintarTrack(input);
+                recalcular();
+            });
+        });
+        recalcular();
+    }
+
     // ── Testimonios: en móvil los 2 últimos se despliegan a pedido ──
     const verMasBtn = document.getElementById('ver-mas-testimonios');
     if (verMasBtn) {

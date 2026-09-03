@@ -628,6 +628,64 @@
     transform: translateY(0) scale(0.96);
   }
 
+  /* ===== Sliders de la calculadora de ROI ===== */
+  .roi-range {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  .roi-range::-webkit-slider-runnable-track {
+    height: 8px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #f39c11 var(--roi-fill, 0%), #e5e7eb var(--roi-fill, 0%));
+  }
+  .roi-range::-moz-range-track {
+    height: 8px;
+    border-radius: 999px;
+    background: #e5e7eb;
+  }
+  .roi-range::-moz-range-progress {
+    height: 8px;
+    border-radius: 999px;
+    background: #f39c11;
+  }
+  /* Pulgar: 24px reales para cumplir el mínimo táctil */
+  .roi-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    margin-top: -8px;
+    border-radius: 50%;
+    background: #1d2937;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 8px rgba(29, 41, 55, 0.35);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .roi-range::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #1d2937;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 8px rgba(29, 41, 55, 0.35);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .roi-range:hover::-webkit-slider-thumb,
+  .roi-range:active::-webkit-slider-thumb {
+    transform: scale(1.12);
+    box-shadow: 0 4px 14px rgba(243, 156, 17, 0.45);
+  }
+  .roi-range:focus-visible::-webkit-slider-thumb {
+    outline: 3px solid #f39c11;
+    outline-offset: 3px;
+  }
+  .roi-range:focus-visible::-moz-range-thumb {
+    outline: 3px solid #f39c11;
+    outline-offset: 3px;
+  }
+
   /* Reduce motion */
   @media (prefers-reduced-motion: reduce) {
     .orbit-ring, .orbit-ring-1, .orbit-ring-2, .orbit-ring-3,
@@ -644,5 +702,7 @@
     .btn-cta-primary:hover, .btn-cta-secondary:hover, .btn-submit:hover, .btn-nav:hover { transform: none; }
     .btn-cta-primary::before, .btn-submit::before, .btn-nav::before { display: none; }
     .btn-ripple::after { display: none; }
+    .roi-range::-webkit-slider-thumb { transition: none; }
+    .roi-range:hover::-webkit-slider-thumb { transform: none; }
   }
 }

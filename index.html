@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/analytics360/Analytics360-imagotipo-azul-y-amarillo-fondo-tranparente.png">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="/analytics360/Analytics360-imagotipo-azul-y-amarillo-fondo-tranparente.png" type="image/png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <title>Analytics360 | Decisiones basadas en datos</title>
     <meta name="description" content="Consultoría de Business Intelligence, Power BI y Automatización de Procesos en Guatemala.">
     <link rel="canonical" href="https://analytics360.net/">
@@ -601,6 +603,73 @@
     </section>
 
 
+
+    <!-- Calculadora: cuánto cuesta el reporteo manual -->
+    <section class="py-14 md:py-20 bg-gray-50 border-t border-gray-100">
+        <div class="max-w-5xl mx-auto px-6 md:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10 reveal">
+                <h2 class="text-secondary font-semibold tracking-wide uppercase text-sm mb-2">Calculadora</h2>
+                <h3 class="text-3xl md:text-4xl font-bold animated-underline">¿Cuánto le cuesta armar reportes a mano?</h3>
+                <p class="text-gray-600 mt-6">Ajuste los tres valores según su operación. El cálculo es suyo y no se envía a ningún lado.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-5 gap-6 items-start reveal">
+                <!-- Controles -->
+                <form id="roi-form" class="lg:col-span-3 bg-white rounded-2xl shadow-lg border border-gray-100 p-6 md:p-8 space-y-7 card-glow" novalidate>
+                    <div>
+                        <div class="flex items-baseline justify-between mb-3 gap-4">
+                            <label for="roi-personas" class="font-semibold text-sm">Personas que arman reportes</label>
+                            <output id="roi-personas-val" for="roi-personas" class="text-2xl font-extrabold text-primary tabular-nums">3</output>
+                        </div>
+                        <input type="range" id="roi-personas" name="personas" min="1" max="25" step="1" value="3"
+                               class="roi-range w-full" aria-describedby="roi-personas-hint">
+                        <p id="roi-personas-hint" class="text-xs text-gray-500 mt-2">Cuenta a quien descarga, cruza o formatea datos, aunque no sea su puesto principal.</p>
+                    </div>
+
+                    <div>
+                        <div class="flex items-baseline justify-between mb-3 gap-4">
+                            <label for="roi-horas" class="font-semibold text-sm">Horas al mes que le dedica cada una</label>
+                            <output id="roi-horas-val" for="roi-horas" class="text-2xl font-extrabold text-primary tabular-nums">20</output>
+                        </div>
+                        <input type="range" id="roi-horas" name="horas" min="2" max="100" step="1" value="20"
+                               class="roi-range w-full" aria-describedby="roi-horas-hint">
+                        <p id="roi-horas-hint" class="text-xs text-gray-500 mt-2">Sume el cierre de mes, los reportes semanales y las consultas de último minuto.</p>
+                    </div>
+
+                    <div>
+                        <div class="flex items-baseline justify-between mb-3 gap-4">
+                            <label for="roi-costo" class="font-semibold text-sm">Costo por hora de esa persona (Q)</label>
+                            <output id="roi-costo-val" for="roi-costo" class="text-2xl font-extrabold text-primary tabular-nums">Q60</output>
+                        </div>
+                        <input type="range" id="roi-costo" name="costo" min="20" max="300" step="5" value="60"
+                               class="roi-range w-full" aria-describedby="roi-costo-hint">
+                        <p id="roi-costo-hint" class="text-xs text-gray-500 mt-2">Salario mensual bruto dividido entre 160 horas. Un sueldo de Q9,600 son Q60 por hora.</p>
+                    </div>
+                </form>
+
+                <!-- Resultado -->
+                <div class="lg:col-span-2 bg-primary text-white rounded-2xl shadow-xl p-6 md:p-8 lg:sticky lg:top-28">
+                    <p class="text-xs uppercase tracking-wider text-gray-300 font-semibold">Hoy le cuesta al año</p>
+                    <p id="roi-costo-anual" class="text-4xl md:text-5xl font-extrabold text-white mt-2 mb-1 tabular-nums" aria-live="polite">Q43,200</p>
+                    <p id="roi-horas-anual" class="text-sm text-gray-400 mb-8">720 horas de su equipo</p>
+
+                    <div class="border-t border-white/10 pt-6">
+                        <p class="text-xs uppercase tracking-wider text-gray-300 font-semibold">Podría recuperar</p>
+                        <p id="roi-ahorro" class="text-3xl md:text-4xl font-extrabold text-brandGreen mt-2 mb-1 tabular-nums" aria-live="polite">Q38,880</p>
+                        <p id="roi-horas-libres" class="text-sm text-gray-400">648 horas para trabajo que sí decide</p>
+                    </div>
+
+                    <p class="text-xs text-gray-400 leading-relaxed mt-6 pt-6 border-t border-white/10">
+                        Estimación al 90 %, la reducción de tiempo de reporteo que logramos con Vozmia. El resultado real depende de sus fuentes de datos y de qué tan repetitivo sea el proceso.
+                    </p>
+
+                    <a href="/contacto.html" id="roi-cta" class="mt-6 w-full px-6 py-3.5 text-base font-semibold text-white bg-secondary hover:bg-orange-600 rounded-xl shadow-lg shadow-orange-500/20 flex items-center justify-center gap-2 btn-cta-primary btn-ripple">
+                        Revisemos su caso <i data-lucide="arrow-right" class="w-5 h-5 btn-arrow-icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- CTA: 3 Pasos Simples -->
     <section class="py-14 md:py-20 bg-primary relative overflow-hidden">

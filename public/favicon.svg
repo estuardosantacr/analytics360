@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Fondo sólido: garantiza contraste en barras claras y oscuras -->
+  <rect width="64" height="64" rx="14" fill="#1d2937"/>
+
+  <!-- Letra A en blanco, gruesa para sobrevivir a 16px -->
+  <path d="M32 13 L45 51 L37.5 51 L34.8 42.5 L29.2 42.5 L26.5 51 L19 51 Z M32 26.5 L30.4 36.5 L33.6 36.5 Z"
+        fill="#ffffff"/>
+
+  <!-- Flecha ascendente naranja: el elemento de marca más reconocible -->
+  <path d="M14 45 L26 33 L33 39 L45 25"
+        fill="none" stroke="#f39c11" stroke-width="6"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M38 23 L48 21 L46.5 31 Z" fill="#f39c11"/>
+</svg>
