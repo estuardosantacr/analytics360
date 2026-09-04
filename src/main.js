@@ -197,6 +197,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ── Parallax effect on hero background elements ──
+    // ── Pausar las animaciones de las secciones que no están en pantalla ──
+    // Solo marca lo que sale del viewport: si el observer nunca corre, las
+    // animaciones se quedan como estaban en vez de congelarse todas.
+    if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+        const observador = new IntersectionObserver((entradas) => {
+            entradas.forEach(e => {
+                e.target.classList.toggle('fuera-de-pantalla', !e.isIntersecting);
+            });
+        }, { rootMargin: '150px 0px' }); // se reanudan justo antes de entrar
+
+        document.querySelectorAll('section, header, footer')
+                .forEach(b => observador.observe(b));
+    }
+
     // ── Calculadora: costo anual del reporteo manual ──
     const roiForm = document.getElementById('roi-form');
     if (roiForm) {

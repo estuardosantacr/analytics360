@@ -628,6 +628,18 @@
     transform: translateY(0) scale(0.96);
   }
 
+  /* ===== Pausar animaciones fuera de pantalla =====
+     Medido: 28 animaciones infinitas corriendo con solo 9 dentro del viewport.
+     La clase se AGREGA al salir de pantalla, no al revés: si el
+     IntersectionObserver no corre, todo sigue animándose como siempre
+     en vez de quedar congelado en silencio. */
+  .fuera-de-pantalla,
+  .fuera-de-pantalla *,
+  .fuera-de-pantalla *::before,
+  .fuera-de-pantalla *::after {
+    animation-play-state: paused;
+  }
+
   /* ===== Sliders de la calculadora de ROI ===== */
   .roi-range {
     -webkit-appearance: none;

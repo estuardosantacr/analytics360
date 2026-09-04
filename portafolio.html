@@ -74,6 +74,10 @@
 
     <!-- Portafolio -->
     <section class="max-w-7xl mx-auto px-6 py-20 flex-1 reveal">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold animated-underline">Dashboards interactivos</h2>
+            <p class="text-gray-600 mt-6">Ábralos y navéguelos como lo hace nuestro cliente todos los días.</p>
+        </div>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
             <!-- Sales Overview Dashboard -->
@@ -300,19 +304,19 @@
     </section>
 
     <!-- Modal: Sales Overview Dashboard -->
-    <div id="modal-sales" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/70 backdrop-blur-sm p-4 md:p-8" onclick="if(event.target===this)closeModal('modal-sales')">
+    <div id="modal-sales" role="dialog" aria-modal="true" aria-labelledby="modal-sales-titulo" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/70 backdrop-blur-sm p-4 md:p-8" onclick="if(event.target===this)closeModal('modal-sales')">
         <div class="bg-white rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] flex flex-col overflow-hidden animate-fade-in">
             <!-- Modal Header -->
             <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100">
                 <div>
-                    <h3 class="text-xl font-bold text-primary">Sales Overview Dashboard</h3>
+                    <h2 id="modal-sales-titulo" class="text-xl font-bold text-primary">Sales Overview Dashboard</h2>
                     <p class="text-sm text-gray-500">Dashboard interactivo — Power BI</p>
                 </div>
                 <div class="flex items-center gap-3">
                     <a href="https://app.powerbi.com/view?r=eyJrIjoiNGQ1MTQzMTktMjFkMS00YzQxLWIwN2YtODA3NTNiNTNlMzg2IiwidCI6ImRmZTIxNDIyLWNjNzctNGQ2MC1hZGViLTZmMjY2MGYzNzc2YiIsImMiOjR9" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 text-sm font-medium text-secondary hover:text-orange-600 transition-colors">
                         <i data-lucide="external-link" class="w-4 h-4"></i> Abrir en Power BI
                     </a>
-                    <button onclick="closeModal('modal-sales')" class="w-10 h-10 rounded-full hover:bg-gray-100 flex items-center justify-center transition-colors">
+                    <button type="button" onclick="closeModal('modal-sales')" aria-label="Cerrar" class="w-10 h-10 rounded-full hover:bg-gray-100 flex items-center justify-center transition-colors focus:outline-none focus-visible:ring-4 focus-visible:ring-secondary/60">
                         <i data-lucide="x" class="w-5 h-5 text-gray-500"></i>
                     </button>
                 </div>
@@ -325,19 +329,19 @@
     </div>
 
     <!-- Modal: Business Insights Dashboard -->
-    <div id="modal-insights" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/70 backdrop-blur-sm p-4 md:p-8" onclick="if(event.target===this)closeModal('modal-insights')">
+    <div id="modal-insights" role="dialog" aria-modal="true" aria-labelledby="modal-insights-titulo" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/70 backdrop-blur-sm p-4 md:p-8" onclick="if(event.target===this)closeModal('modal-insights')">
         <div class="bg-white rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] flex flex-col overflow-hidden animate-fade-in">
             <!-- Modal Header -->
             <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100">
                 <div>
-                    <h3 class="text-xl font-bold text-primary">Business Insights 360</h3>
+                    <h2 id="modal-insights-titulo" class="text-xl font-bold text-primary">Business Insights 360</h2>
                     <p class="text-sm text-gray-500">Dashboard interactivo — Power BI</p>
                 </div>
                 <div class="flex items-center gap-3">
                     <a href="https://app.powerbi.com/view?r=eyJrIjoiMTdiMzExNjktODE2Yy00OGYxLTljZGEtMGM4MmQ2YzU1MDY3IiwidCI6ImRmZTIxNDIyLWNjNzctNGQ2MC1hZGViLTZmMjY2MGYzNzc2YiIsImMiOjR9" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 text-sm font-medium text-secondary hover:text-orange-600 transition-colors">
                         <i data-lucide="external-link" class="w-4 h-4"></i> Abrir en Power BI
                     </a>
-                    <button onclick="closeModal('modal-insights')" class="w-10 h-10 rounded-full hover:bg-gray-100 flex items-center justify-center transition-colors">
+                    <button type="button" onclick="closeModal('modal-insights')" aria-label="Cerrar" class="w-10 h-10 rounded-full hover:bg-gray-100 flex items-center justify-center transition-colors focus:outline-none focus-visible:ring-4 focus-visible:ring-secondary/60">
                         <i data-lucide="x" class="w-5 h-5 text-gray-500"></i>
                     </button>
                 </div>
@@ -350,19 +354,19 @@
     </div>
 
     <!-- Modal: Restaurant Analytics Dashboard -->
-    <div id="modal-restaurant" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/70 backdrop-blur-sm p-4 md:p-8" onclick="if(event.target===this)closeModal('modal-restaurant')">
+    <div id="modal-restaurant" role="dialog" aria-modal="true" aria-labelledby="modal-restaurant-titulo" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/70 backdrop-blur-sm p-4 md:p-8" onclick="if(event.target===this)closeModal('modal-restaurant')">
         <div class="bg-white rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] flex flex-col overflow-hidden animate-fade-in">
             <!-- Modal Header -->
             <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100">
                 <div>
-                    <h3 class="text-xl font-bold text-primary">Restaurant Analytics</h3>
+                    <h2 id="modal-restaurant-titulo" class="text-xl font-bold text-primary">Restaurant Analytics</h2>
                     <p class="text-sm text-gray-500">Dashboard interactivo — Power BI</p>
                 </div>
                 <div class="flex items-center gap-3">
                     <a href="https://app.powerbi.com/view?r=eyJrIjoiMTg0NmJhMDMtNWNiNC00N2U1LWFkMDUtN2Q2NmM5Zjc3NzM0IiwidCI6ImRmZTIxNDIyLWNjNzctNGQ2MC1hZGViLTZmMjY2MGYzNzc2YiIsImMiOjR9" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 text-sm font-medium text-secondary hover:text-orange-600 transition-colors">
                         <i data-lucide="external-link" class="w-4 h-4"></i> Abrir en Power BI
                     </a>
-                    <button onclick="closeModal('modal-restaurant')" class="w-10 h-10 rounded-full hover:bg-gray-100 flex items-center justify-center transition-colors">
+                    <button type="button" onclick="closeModal('modal-restaurant')" aria-label="Cerrar" class="w-10 h-10 rounded-full hover:bg-gray-100 flex items-center justify-center transition-colors focus:outline-none focus-visible:ring-4 focus-visible:ring-secondary/60">
                         <i data-lucide="x" class="w-5 h-5 text-gray-500"></i>
                     </button>
                 </div>
@@ -375,17 +379,17 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-[#10171f] text-gray-300 pt-16 pb-8 border-t border-white/10 mt-auto">
+    <footer class="bg-[#10171f] text-gray-300 pt-12 md:pt-16 pb-8 border-t border-white/10 mt-auto">
         <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-10 md:mb-12">
                 <div class="lg:col-span-1">
-                    <span class="block text-3xl font-bold text-white mb-4">Analytics<span class="text-secondary">360</span></span>
-                    <p class="text-sm text-gray-400 mb-6 font-medium tracking-wide border-l-2 border-secondary pl-4">Decisiones basadas en datos.</p>
+                    <span class="block text-3xl font-bold text-white mb-3">Analytics<span class="text-secondary">360</span></span>
+                    <p class="text-sm text-gray-400 mb-4 font-medium tracking-wide border-l-2 border-secondary pl-4">Decisiones basadas en datos.</p>
                     <p class="text-sm text-gray-400 leading-relaxed">Transformamos la cultura de datos en Centroamérica, convirtiendo información compleja en decisiones estratégicas claras.</p>
                 </div>
                 <div>
-                    <h4 class="text-white font-bold mb-6 text-lg">Enlaces Rápidos</h4>
-                    <ul class="space-y-3 text-sm">
+                    <h4 class="text-white font-bold mb-4 md:mb-6 text-lg">Enlaces Rápidos</h4>
+                    <ul class="space-y-2.5 text-sm">
                         <li><a href="/" class="hover:text-secondary transition-colors">Inicio</a></li>
                         <li><a href="/servicios.html" class="hover:text-secondary transition-colors">Servicios</a></li>
                         <li><a href="/portafolio.html" class="hover:text-secondary transition-colors">Portafolio</a></li>
@@ -394,8 +398,8 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-white font-bold mb-6 text-lg">Servicios Principales</h4>
-                    <ul class="space-y-3 text-sm">
+                    <h4 class="text-white font-bold mb-4 md:mb-6 text-lg">Servicios Principales</h4>
+                    <ul class="space-y-2.5 text-sm">
                         <li><a href="/servicios.html" class="hover:text-secondary transition-colors">Dashboards Power BI</a></li>
                         <li><a href="/servicios.html" class="hover:text-secondary transition-colors">Modelado de Datos</a></li>
                         <li><a href="/automatizaciones.html" class="hover:text-secondary transition-colors">Automatización n8n</a></li>
@@ -403,8 +407,8 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-white font-bold mb-6 text-lg">Contacto</h4>
-                    <ul class="space-y-4 text-sm">
+                    <h4 class="text-white font-bold mb-4 md:mb-6 text-lg">Contacto</h4>
+                    <ul class="space-y-3 text-sm">
                         <li class="flex items-start gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-secondary shrink-0"></i><span>Guatemala, Centroamérica</span></li>
                         <li class="flex items-center gap-3"><i data-lucide="mail" class="w-5 h-5 text-secondary shrink-0"></i><a href="mailto:info@analytics360.net" class="hover:text-white transition-colors">info@analytics360.net</a></li>
                         <li class="flex items-center gap-3"><i data-lucide="phone" class="w-5 h-5 text-secondary shrink-0"></i><a href="https://wa.me/50257656833" class="hover:text-white transition-colors">+502 5765-6833</a></li>
@@ -423,31 +427,71 @@
 
     <script type="module" src="/src/main.js"></script>
     <script>
+        // Guarda quién abrió el modal para devolverle el foco al cerrar
+        let disparador = null;
+
+        // Solo los que realmente se pueden enfocar: "Abrir en Power BI" está
+        // oculto bajo 640px y focus() sobre display:none no hace nada.
+        const focusablesDe = (modal) => Array.from(modal.querySelectorAll(
+            'a[href], button:not([disabled]), iframe, [tabindex]:not([tabindex="-1"])'
+        )).filter(el => el.offsetParent !== null);
+
         function openModal(id) {
             const modal = document.getElementById(id);
+            disparador = document.activeElement;
+
             modal.classList.remove('hidden');
             modal.classList.add('flex');
             document.body.style.overflow = 'hidden';
-            // Lazy-load iframe
+
+            // El iframe de Power BI se carga recién al abrir
             const iframe = modal.querySelector('iframe[data-src]');
             if (iframe && !iframe.getAttribute('src')) {
                 iframe.src = iframe.dataset.src;
             }
-            // Re-init lucide icons inside modal
-            if (window.lucide) lucide.createIcons();
+
+            // El foco entra al diálogo: si no, el teclado sigue en la página de atrás
+            focusablesDe(modal)[0]?.focus();
         }
+
         function closeModal(id) {
             const modal = document.getElementById(id);
             modal.classList.add('hidden');
             modal.classList.remove('flex');
             document.body.style.overflow = '';
+
+            // Devolver el foco a la tarjeta que lo abrió
+            disparador?.focus();
+            disparador = null;
         }
-        // Close on Escape key
+
+        const modalAbierto = () =>
+            Array.from(document.querySelectorAll('[id^="modal-"]'))
+                 .find(m => !m.classList.contains('hidden'));
+
         document.addEventListener('keydown', (e) => {
+            const abierto = modalAbierto();
+            if (!abierto) return;
+
             if (e.key === 'Escape') {
-                document.querySelectorAll('[id^="modal-"]').forEach(m => {
-                    if (!m.classList.contains('hidden')) closeModal(m.id);
-                });
+                closeModal(abierto.id);
+                return;
+            }
+
+            // Trampa de foco: el tabulador no debe salirse del diálogo
+            if (e.key === 'Tab') {
+                const focusables = focusablesDe(abierto);
+                if (!focusables.length) return;
+                const primero = focusables[0];
+                const ultimo = focusables[focusables.length - 1];
+
+                if (e.shiftKey && document.activeElement === primero) {
+                    e.preventDefault();
+                    ultimo.focus();
+                } else if (!e.shiftKey && document.activeElement === ultimo) {
+                    e.preventDefault();
+                    primero.focus();
+                }
             }
         });
 
